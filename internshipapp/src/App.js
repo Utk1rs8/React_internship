@@ -3,7 +3,7 @@ const App=()=>
   return(
     <>
     
-    <h1>this my app</h1>
+    <h1>this my new app</h1>
     </>
   )
 }
