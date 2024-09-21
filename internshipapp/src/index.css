@@ -10,7 +10,16 @@
 {
     display: flex;
     justify-content: space-around;
-
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* margin-top: 10px; */
+    background-color: white;
+    border: 0px solid whitesmoke;
+    box-shadow: 0 0 6px 3px rgb(223, 222, 222);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+   
 }
 #Cartandlog
 {
@@ -57,5 +66,26 @@
 }
 #logreg h1:hover
 {
+    color: rgb(244, 44, 44)
+}
+#topmenu
+{
+
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+#Link
+{
+    color: #000;
+    text-decoration: none;
+    padding: 0 20px;
+    font-size: 20px;
+    font-weight:1px;
+}
+#Link:hover{
     color: rgb(244, 44, 44)
 }

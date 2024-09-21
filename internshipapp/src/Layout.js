@@ -24,11 +24,11 @@ const Layout=()=>{
             </div>    
                 
             <div id="topmenu">
-                <Link to="home">Home</Link>
-                <Link to="Bike">Bikes</Link>
-                <Link to="service">Service</Link>
-                <Link to="about">About</Link>
-                <Link to="contact">Contact</Link>
+                <Link id="Link" to="home">Home</Link>
+                <Link id="Link" to="Bike">Bikes</Link>
+                <Link id="Link" to="service">Service</Link>
+                <Link id="Link" to="about">About</Link>
+                <Link id="Link" to="contact">Contact</Link>
             </div>  
         
         </div>
