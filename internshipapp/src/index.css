@@ -1,0 +1,61 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Mukta", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    background-color: white;
+}
+
+#main
+{
+    display: flex;
+    justify-content: space-around;
+
+}
+#Cartandlog
+{
+    display: flex;
+    
+}
+#cart
+{
+    margin-right: 20px;
+    margin-top: 2px;
+}
+#carticon{
+     font-size: 24px;
+     color: #000;
+}
+#carticon:hover
+{
+    color: rgb(244, 44, 44)
+}
+#logo h1
+{
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: lighter;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+
+    color: #000;
+}
+#logo h1::after
+{
+    content: " It";
+    color: rgb(244, 44, 44)
+}
+#logreg
+{
+    display: flex;
+    margin-top: 4px;
+}
+#logreg h1{
+    font-size: 18px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+#logreg h1:hover
+{
+    color: rgb(244, 44, 44)
+}
