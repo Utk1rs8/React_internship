@@ -37,41 +37,33 @@ const Layout=()=>{
 
         <Outlet/>
 
-        <div class="mlk">
-            <div class="ko">
-                <div className="footer-box">
-                    <h1 className="fo-wri">Category</h1>
-                    <h3 className="fo-para">Running Shoes</h3>
-                    <h3 className="fo-para">Yoga Shoes</h3>
-                    <h3 className="fo-para">Sports Shoes</h3>
-                    <h3 className="fo-para">Casual Shoes</h3>
+        <div class="">
+            <div class="Parent-footer">
+                <div className="">
+                    <h1 className="footer-column-name">Category</h1>
+                    <h3 className="footer-column">Tourning Bikes</h3>
+                    <h3 className="footer-column">Naked Bikes</h3>
+                    <h3 className="footer-column">Sports Bikes</h3>
+                    <h3 className="footer-column">Adventure Bikes</h3>
+                    <h3 className="footer-column">Cruiser Bikes</h3>
+                    <h3 className="footer-column">Cafe Racer Bikes</h3>
                 </div>
-                <div className="footer-box">
-                    <h1 className="fo-wri">Business</h1>
-                    <h3 className="fo-para">Company Profile</h3>    
-                    <h3 className="fo-para">Social Responsibility</h3>
-                    <h3 className="fo-para">Brand Kit</h3>
-                    <h3 className="fo-para">Media</h3>
-                    <h3 className="fo-para">Employee</h3>
-                    <h3 className="fo-para">Privacy</h3>
-                    <h3 className="fo-para">Terms and Conditions</h3>
+                <div className="">
+                    <h1 className="footer-column-name">Useful Links</h1>
+                    <h3 className="footer-column">Return Policies</h3>
+                    <h3 className="footer-column">Announcement</h3>
+                    <h3 className="footer-column">Have Issue?</h3>
+                    <h3 className="footer-column">Media Kit</h3>
                 </div>
-                <div className="footer-box">
-                    <h1 className="fo-wri">Useful Links</h1>
-                    <h3 className="fo-para">Return Policies</h3>
-                    <h3 className="fo-para">Announcement</h3>
-                    <h3 className="fo-para">Have Issue?</h3>
-                    <h3 className="fo-para">Media Kit</h3>
-                </div>
-                <div className="footer-box">
-                    <h1 className="fo-wri">Support Center</h1>
-                    <h3 className="fo-para">utkarshchurariya19@gmail.com</h3>
-                    <h3 className="fo-para">8982260970</h3>
-                    <h3 className="fo-para">Ride It,Kolar Road,Bhopal,M.P</h3>
+                <div className="">
+                    <h1 className="footer-column-name">Support Center</h1>
+                    <h3 className="footer-column">utkarshchurariya19@gmail.com</h3>
+                    <h3 className="footer-column">8982260970</h3>
+                    <h3 className="footer-column">Ride It,Kolar Road,Bhopal,M.P</h3>
                 </div>
                 <div>
-                    <h1 className="fo-wri">Follow Us</h1>
-                    <div className="f-icon">
+                    <h1 className="footer-column-name">Follow Us</h1>
+                    <div className="">
                         <FaInstagram />
                         <FaSnapchatSquare />
                         <br/>
@@ -83,12 +75,12 @@ const Layout=()=>{
         <br/>
         <br/>
         <br/>
-        <div class="kkk">
+        <div class="end-footer">
             <div id="logo">
                 <h1>Ride</h1>
             </div>            
             <div>
-                <h1 className="fo-wri">@2024 RIDE IT,All Rights Reserved.</h1>
+                <h1 className="footer-column-name">@2024 RIDE IT,All Rights Reserved.</h1>
             </div>
         </div>
         </div>
