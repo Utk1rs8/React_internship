@@ -164,6 +164,7 @@
   bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
+  background-color: transparent;
 }
 
 .container__slider__links-small {
@@ -174,8 +175,8 @@
   border-radius: 50%;
   outline: none;
   border: 0;
-  background-color: white;
-  border: 1px solid grey;
+  background-color: transparent;
+  border: 1px solid black;
   transition: background-color 1s ease;
   margin: 0 2px;
 }
@@ -228,3 +229,86 @@
   height: auto;
 }
 
+/* contact css */
+
+.abt-div
+{
+  width: 1200px;
+  height: 60vh;
+  margin-top: 13vh; 
+}
+
+.k-txt
+{
+  font-family: poppins,sans-serif;
+  font-size: 150px;
+  color: rgba(191, 191, 191, 0.675);
+}
+
+.a-txt-p1
+{
+  display: flex;
+  justify-content: left;
+  margin-left: 10rem;
+}
+
+.a-txt1
+{
+  color: rgb(85, 85, 85);
+  font-size: 5rem;
+  font-family: poppins,sans-serif;
+}
+
+.map-div
+{
+  display: flex;
+  justify-content: space-evenly;
+  height: 100vh;
+  background-color: rgba(238, 238, 238, 0.575);
+}
+.con-txt
+{
+  font-family: poppins,sans-serif;
+  font-size: 40px;
+}
+.con-small
+{
+  font-family: sans-serif;
+  font-weight: lighter;
+  color: gray;
+}
+.con-txt1
+{
+  font-family: poppins,sans-serif;
+  font-size: 70px;
+}
+.map-txt
+{
+  margin-top: 30vh;
+}
+.map-photo
+{
+  margin-top: 30vh;
+}
+
+.map-image
+{
+  width: 25vw;
+}
+
+/* paralax */
+
+#parallax {
+  /* The image used */
+  background-image: url("https://wallpapersmug.com/download/1920x1080/6fd911/ducati-panigale-v4-r-4k.jpg");
+
+  /* Set a specific height */
+  min-height: 750px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: aliceblue;
+}

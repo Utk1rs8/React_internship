@@ -6,12 +6,12 @@ const images = [
   },
   {
     imgURL:
-      "25my-ninja-zx4rr-riding-ew-desktop-1920x1152px.jpeg",
+      "image-02.jpg",
     imgAlt: "img-2"
   },
   {
     imgURL:
-      "25my-z650-riding-ew-desktop-1920x1152.jpeg",
+      "image-02.png",
     imgAlt: "img-3"
   },
   {
