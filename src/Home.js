@@ -15,6 +15,10 @@ const Home=()=>{
         <div id="parallax">
           
         </div>
+
+        <div id="parallax2">
+          
+        </div>
         
         </>
     )
