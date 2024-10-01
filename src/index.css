@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Mukta", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    background-color: white;
+    /* background-color: white; */
     /* cursor: pointer; */
 }
 /* HEDAER CSS */
@@ -54,6 +54,22 @@
     content: " It";
     color: rgb(244, 44, 44)
 }
+#loginpage{
+    display: flex;
+    font-size: 18px;
+    font-weight: lighter;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+}
+#loginpage:hover
+{
+    color: rgb(244, 44, 44)
+}
+#loginpage::after
+{
+  content: "/";
+}
 #logreg
 {
     display: flex;
@@ -95,7 +111,8 @@
 .subnav {
   float: left;
   overflow: hidden;
-}  
+
+} 
 .subnav-content
 {
   display: none;
@@ -103,6 +120,7 @@
   left: 1;
   width: fit-content;
   z-index: 1;
+  background-color: white;
 
   
 }  
@@ -412,4 +430,82 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: aliceblue;
+}
+
+/* Login Page CSS */
+
+.container {
+
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+  background: transparent;
+}
+
+
+#form {
+  width: 70%;
+  border: 1px solid #dfdfdf;
+  padding: 20px;
+  border-radius: 5px;
+  background-color:transparent;
+  /* background-color: rgb(255 255 255 / 30%); */
+  backdrop-filter: blur(5px);
+}
+#uiform
+{
+  background: transparent;
+}
+
+input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 25px;
+  border-radius: 9%;
+  background: transparent;
+}
+input::placeholder
+{
+  color: #fff;
+}
+
+pre {
+  width: 70%;
+  color: #fff;
+  font-size: larger;
+}
+
+#submit {
+  background: #05b462 !important;
+  padding: 5px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+p {
+  color: rgb(255, 0, 0);
+}
+
+.text {
+  margin: 2px;
+  padding: 5px;
+}
+
+#span{
+  color: rgb(0, 95, 236);
+  cursor: pointer;
+}
+
+.bgImg
+{
+    background-image:url("/public/image-02.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
 }

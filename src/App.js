@@ -5,6 +5,7 @@ import Bike from "./Bike";
 import Service from "./Service";
 import Contact from "./Contact";
 import About from "./About";
+import LoginPage from "./LoginPage";
 
 
 
@@ -21,6 +22,8 @@ const App=()=>{
               <Route path="service" element={<Service/>}/>
               <Route path="about" element={<About/>}/>
               <Route path="contact" element={<Contact/>}/>
+              <Route path="loginpage" element={<LoginPage/>}/>
+              
             </Route>
            </Routes>
         </BrowserRouter>

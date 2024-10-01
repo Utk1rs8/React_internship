@@ -18,7 +18,7 @@ const Layout=()=>{
                         <Link id="carticon"><FaShoppingCart/></Link>
                     </div>
                      <div id="logreg">
-                        <h1>Login/</h1>
+                        <Link id="loginpage" to="loginpage">Login</Link>
                         <h1>Register</h1>
                     </div>
                 </div>
