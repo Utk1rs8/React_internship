@@ -54,7 +54,7 @@
     content: " It";
     color: rgb(244, 44, 44)
 }
-#loginpage{
+#loginform{
     display: flex;
     font-size: 18px;
     font-weight: lighter;
@@ -62,14 +62,28 @@
     text-decoration: none;
     color: #000;
 }
-#loginpage:hover
+#loginform:hover
 {
     color: rgb(244, 44, 44)
 }
-#loginpage::after
+#loginform::after
 {
   content: "/";
 }
+#registerform{
+  display: flex;
+  font-size: 18px;
+  font-weight: lighter;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+#registerform:hover
+{
+  color: rgb(244, 44, 44)
+}
+
+
 #logreg
 {
     display: flex;
@@ -433,79 +447,162 @@
 }
 
 /* Login Page CSS */
+#Loginform {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  background: url('./bike.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
-.container {
-
-  display: flex !important;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  max-width: 500px;
-  width: 100%;
-  margin: auto;
+.wrapper {
+  width: 90%; /* Adjusted width for responsiveness */
+  max-width: 400px; /* Added max-width for larger screens */
   background: transparent;
-}
-
-
-#form {
-  width: 70%;
-  border: 1px solid #dfdfdf;
-  padding: 20px;
-  border-radius: 5px;
-  background-color:transparent;
-  /* background-color: rgb(255 255 255 / 30%); */
-  backdrop-filter: blur(5px);
-}
-#uiform
-{
-  background: transparent;
-}
-
-input {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-left: 25px;
-  border-radius: 9%;
-  background: transparent;
-}
-input::placeholder
-{
-  color: #fff;
-}
-
-pre {
-  width: 70%;
-  color: #fff;
-  font-size: larger;
-}
-
-#submit {
-  background: #05b462 !important;
-  padding: 5px;
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(10px);
+  color: rgb(255, 255, 255);
   border-radius: 10px;
+  padding: 30px 40px;
+  margin: auto;
+  position: absolute; /* Changed to relative for better centering */
+  top: 30%; /* Adjusted for vertical centering */
+  left: 80%;
+  transform: translateX(-50%); /* Centered horizontally */
+}
+
+.wrapper h1 {
+  font-size: 2.5em; /* Responsive font size */
+  text-align: center;
+  color: white;
+}
+
+.wrapper .input-box {
+  position: relative;
   width: 100%;
+  height: 50px;
+  margin: 30px 0;
 }
 
-p {
-  color: rgb(255, 0, 0);
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 40px;
+  font-size: 1em; /* Responsive font size */
+  color: white;
+  padding: 20px 45px 20px 20px;
 }
 
-.text {
-  margin: 2px;
-  padding: 5px;
+.input-box input::placeholder {
+  color: white;
 }
 
-#span{
-  color: rgb(0, 95, 236);
+.input-box .icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1em; /* Responsive icon size */
+}
+
+.wrapper .remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em; /* Responsive font size */
+  margin: -15px 0 15px;
+}
+
+.remember-forgot a {
+  color: white;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.wrapper button {
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  color: #333;
+  font-size: 1em; /* Responsive font size */
   cursor: pointer;
+  font-weight: 700;
 }
 
-.bgImg
-{
-    background-image:url("/public/image-02.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 100%;
+.wrapper .register-link {
+  font-size: 0.9em; /* Responsive font size */
+  text-align: center;
+  margin: 20px 0 15px;
+}
+
+.register-link p a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link p a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 20px; /* Reduced padding for smaller screens */
+    position: absolute; /* Changed to relative for better centering */
+    top: 30%; /* Adjusted for vertical centering */
+    left: 50%;
+  }
+
+  .wrapper h1 {
+    font-size: 2em; /* Smaller heading for mobile */
+  }
+
+  .input-box input {
+    font-size: 0.9em; /* Slightly smaller input text */
+  }
+
+  .wrapper button {
+    font-size: 0.9em; /* Smaller button text */
+  }
+
+  .wrapper .remember-forgot {
+    font-size: 0.8em; /* Smaller text for links */
+  }
+
+  .wrapper .register-link {
+    font-size: 0.8em; /* Smaller register link */
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    width: 95%; /* Slightly wider on very small screens */
+    position: absolute; /* Changed to relative for better centering */
+    top: 30%; /* Adjusted for vertical centering */
+    left: 50%;
+  }
+
+  .wrapper h1 {
+    font-size: 1.5em; /* Further reduce heading size */
+  }
+
+  .input-box input {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .wrapper button {
+    height: 40px; /* Slightly smaller button */
+  }
 }
