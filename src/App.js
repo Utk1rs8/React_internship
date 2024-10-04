@@ -7,6 +7,7 @@ import Contact from "./Contact";
 import About from "./About";
 import LoginForm from "./LoginForm";
 import Registrationform from "./Registrationform";
+import Datainsert from "./Datainsert";
 
 
 
@@ -25,6 +26,7 @@ const App=()=>{
               <Route path="contact" element={<Contact/>}/>
               <Route path="loginform" element={<LoginForm/>}/>
               <Route path="registrationform" element={<Registrationform/>}/>
+              <Route path="datainsert" element={<Datainsert/>}/>
               
             </Route>
            </Routes>

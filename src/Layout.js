@@ -106,6 +106,8 @@ const Layout=()=>{
             </div>
             
             </div>
+            
+            <Link to="datainsert">datainsert</Link>
         </>
     )
 }
