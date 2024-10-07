@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./styles.css";
 class ProductSlider extends Component {
+
   constructor() {
     super();
     this.state = {

@@ -28,7 +28,7 @@ const About = () => {
         <h2>Meet Our Team</h2>
         <div className="team-grid">
           <div className="team-member">
-            <img src="https://via.placeholder.com/150" alt="Team Member 1" />
+            <img src="164029924.jpeg" alt="Team Member 1" />
             <h3>John Doe</h3>
             <p>CEO & Founder</p>
           </div>
