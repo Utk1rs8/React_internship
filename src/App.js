@@ -8,6 +8,7 @@ import About from "./About";
 import LoginForm from "./LoginForm";
 import Registrationform from "./Registrationform";
 import Datainsert from "./Datainsert";
+import AdminDashboard from "./AdminDashboard";
 
 
 
@@ -27,6 +28,7 @@ const App=()=>{
               <Route path="loginform" element={<LoginForm/>}/>
               <Route path="registrationform" element={<Registrationform/>}/>
               <Route path="datainsert" element={<Datainsert/>}/>
+              <Route path="Adminlogin" element={<AdminDashboard/>}/>
               
             </Route>
            </Routes>

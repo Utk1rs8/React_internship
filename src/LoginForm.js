@@ -21,9 +21,8 @@ const LoginForm=()=> {
             <div className="remember-forgot">
                 <label><input type="checkbox" />Remember me</label>
                 <a href="#">Forgot password?</a>
-                
             </div>
-            <button type='submit'>Login</button>
+            <button type='submit'><Link id='login-button' to="../Adminlogin">Login</Link></button>
             <div className="register-link">
                 <p>Don't have an account?<Link to="../registrationform">Register</Link></p>
             </div>

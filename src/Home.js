@@ -1,6 +1,7 @@
 import React from "react";
 import images from "./Slider_images";
 import CustomSlider from "./Custom_slider";
+import ProductSlider from "./ProductSlider";
 const Home=()=>{
     return(
         <>
@@ -11,7 +12,7 @@ const Home=()=>{
             })}
           </CustomSlider>
         </div>
-        
+        <ProductSlider />
         <div id="parallax">
           
         </div>

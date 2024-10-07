@@ -539,6 +539,11 @@
   cursor: pointer;
   font-weight: 700;
 }
+#login-button
+{
+  text-decoration: none;
+  color: #333;
+}
 
 .wrapper .register-link {
   font-size: 0.9em; /* Responsive font size */
