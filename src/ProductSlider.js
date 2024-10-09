@@ -47,9 +47,6 @@ class ProductSlider extends Component {
         },
         {
           img: "https://dummyimage.com/600x400/000/B22222"
-        },
-        {
-          img: "https://dummyimage.com/600x400/000/7CFC00"
         }
       ]
     };

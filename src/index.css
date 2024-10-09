@@ -694,3 +694,64 @@
   font-size: 1.1rem;
   color: #666;
 }
+
+/* bike page css */
+
+.shoe-box
+{
+  padding: 30px;
+  background-color: rgba(235, 235, 235, 0.89);
+  width: 300px;
+  margin: 50px;
+}
+.product-box
+{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.prod-nam
+{
+  font-family:Calibri;
+  font-size: 20px;
+  margin-top: 5px;
+}
+.prod-pri2
+{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 15px;
+  margin-top: 5px;
+
+}
+.prod-pri1
+{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 15px;
+  text-decoration: line-through;
+  color: rgba(160, 159, 159, 0.701);
+  margin-top: 5px;
+
+}
+.prod-div
+{
+  display: flex;
+  justify-content: center;
+}
+.p-but1
+{
+    font-size: 13px;
+    padding: 5px;
+    border-radius: 10px;
+    font-family:poppins;
+    border: none;
+    margin-top: 10px; 
+
+}
+.shop-div
+{
+  background-color: rgba(235, 235, 235, 0.89);
+}
+.head-shop
+{
+  display: flex;
+}
