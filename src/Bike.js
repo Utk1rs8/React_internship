@@ -8,7 +8,7 @@ const Bike = () => {
     const dispatch = useDispatch();
     
     const loadData = () => {
-        let url = "http://127.0.0.1:8000/";
+        let url = "http://127.0.0.1:8000/bikes/";
         axios.get(url).then((res) => {
             setMydata(res.data);
         });

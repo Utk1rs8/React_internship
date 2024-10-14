@@ -12,7 +12,7 @@ const ProductSlider = () => {
   const dispatch = useDispatch();
     
   const loadData = () => {
-    let url = "http://127.0.0.1:8000/";
+    let url = "http://127.0.0.1:8000/slider/";
     axios.get(url).then((res) => {
       setMydata(res.data);
     });
@@ -59,7 +59,6 @@ const ProductSlider = () => {
 
   return (
     <div>
-      <h2>Responsive Product Carousel</h2>
       <Slider {...settings}>
         {mydata.map((slide, index) => (
           <div key={index}>

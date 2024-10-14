@@ -7,7 +7,7 @@ const SliderDetail=()=>{
     const [imageFile, setImageFile] = useState(null); // New state for file
 
     const insertData = () => {
-        let url = "http://127.0.0.1:8000/";
+        let url = "http://127.0.0.1:8000/slider/";
         console.log(input);
 
         // Create FormData object for handling files
