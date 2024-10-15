@@ -6,7 +6,7 @@ const Datainsert = () => {
     const [imageFile, setImageFile] = useState(null); // New state for file
 
     const insertData = () => {
-        let url = "http://127.0.0.1:8000/";
+        let url = "http://127.0.0.1:8000/bikes/";
         console.log(input);
 
         // Create FormData object for handling files
@@ -20,7 +20,8 @@ const Datainsert = () => {
         formData.append('weight', input.weight);
         formData.append('fuel_tank', input.fuel_tank);
         formData.append('power', input.power);
-        formData.append('tourque', input.tourque); // Changed back to 'tourque'
+        formData.append('tourque', input.tourque); // Kept 'tourque' as per your original
+        formData.append('biketype', input.biketype); // Changed back to 'tourque'
 
         axios.post(url, formData)
             .then((res) => {
@@ -46,6 +47,17 @@ const Datainsert = () => {
             <div>
                 <label>Name:</label>
                 <input type="text" name="name" value={input.name || ''} onChange={handleInput} />
+            </div>
+            <div>
+                <label>Bike Type:</label>
+            <select name="biketype" id="biketype">
+                <option value="touring">Touring</option>
+                <option value="naked">Naked</option>
+                <option value="sports">Sports</option>
+                <option value="adventure">Adventure</option>
+                <option value="curiser">Curiser</option>
+                <option value="caferacer">Cafe racer</option>
+            </select>
             </div>
             <div>
                 <label>Price:</label>

@@ -10,6 +10,13 @@ const LoginForm=()=> {
    <div className='wrapper'>
         <form action="">
             <h1>Login</h1>
+            <div>
+            <label>Bike Type:</label>
+            <select name="client_admin" id="client_admin">
+                <option value="client">Client</option>
+                <option value="admin">Admin</option>
+            </select>
+            </div>
             <div className="input-box">
                 <input type="text" placeholder="Username" required/>
                 <FaUserAlt className='icon'/>
