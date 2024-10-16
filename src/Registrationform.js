@@ -8,7 +8,7 @@ import { MdEmail } from "react-icons/md";
 const Registrationform=()=>{
     return(
         <>
-   <div id="Loginform">
+   <div id="Registration">
    <div className='wrapper'>
         <form action="">
             <h1>Registration</h1>

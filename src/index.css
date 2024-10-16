@@ -755,3 +755,11 @@
 {
   display: flex;
 }
+#Registration {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  background: url('./honda-cbr650r-2024-3840x2160-13405.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
