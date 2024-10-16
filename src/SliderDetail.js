@@ -38,7 +38,7 @@ const SliderDetail=()=>{
 
     return(
         <>
-        <div>
+             <div>
                 <label>Name:</label>
                 <input type="text" name="name" value={input.name || ''} onChange={handleInput} />
             </div>

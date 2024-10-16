@@ -20,6 +20,7 @@ const Bike = () => {
 
     const productAns = mydata.map((product, index) => {
         return (
+            <>
             <div key={index} className="shoe-box">
                 <FaCartShopping className="cart-but" />
                 <img src={product.image} alt={product.name} width="300" />
@@ -32,12 +33,23 @@ const Bike = () => {
                     </div>
                 </center>
             </div>
+            </>
         );
     });
 
     return (
         <>
-            <h1>This is My Bike page</h1>
+        <div class="search-bar-container">
+            <form class="search-bar">
+              <input
+                type="text"
+                placeholder="Search for bike...."
+                class="search-input"
+              />
+              <button type="submit" class="search-button">Search</button>
+            </form>
+          </div>
+        
             <div className="shop-div">
                 <div className="product-box">
                     {productAns}

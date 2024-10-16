@@ -4,7 +4,7 @@ import { Card, Button } from "react-bootstrap";
 const ProductCard = (props) => {
   return (
     <>
-      <Card style={{ width: "inherit" }}>
+      <Card style={{ width: "inherit", border:"0", backgroundColor:"whitesmoke", borderRadius:"2px" }}>
         <Card.Img variant="top" src={props.imgSrc} />
         <Card.Body>
           <Card.Title>{props.title}</Card.Title>
@@ -12,8 +12,8 @@ const ProductCard = (props) => {
             {props.price}
           </Card.Text>
           <div className="product-actions">
-            <Button variant="primary">Buy Now</Button>
-            <Button variant="secondary">Add to cart</Button>
+            <Button id="Buy-now" variant="primary">Buy Now</Button>
+            <Button id="Add-to-Cart" variant="secondary">Add to Cart</Button>
           </div>
         </Card.Body>
       </Card>

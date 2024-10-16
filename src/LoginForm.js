@@ -11,10 +11,10 @@ const LoginForm=()=> {
         <form action="">
             <h1>Login</h1>
             <div>
-            <label>Bike Type:</label>
+            <label></label>
             <select name="client_admin" id="client_admin">
-                <option value="client">Client</option>
-                <option value="admin">Admin</option>
+                <option id="Select-Option" value="client">Client</option>
+                <option id="Select-Option" value="admin">Admin</option>
             </select>
             </div>
             <div className="input-box">

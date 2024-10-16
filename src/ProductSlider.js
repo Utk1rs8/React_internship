@@ -23,7 +23,7 @@ const ProductSlider = () => {
   }, []);
 
   const settings = {
-    dots: false,
+    dots: true,
     infinite: false,
     speed: 400,
     slidesToShow: 3,
