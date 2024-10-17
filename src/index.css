@@ -418,7 +418,7 @@
 
 #parallax {
   /* The image used */
-  background-image: linear-gradient(to bottom,transparent, rgba(0, 0, 0, 0.585)),url("ducati-panigale-v4-r-4k.jpg");
+  background-image: url("ducati-panigale-v4-r-4k.jpg");
 
   /* Set a specific height */
   min-height: 700px;
@@ -433,7 +433,7 @@
 
 #parallax2 {
   /* The image used */
-  background-image:  linear-gradient(to bottom,transparent, rgba(0, 0, 0, 0.6)),url("aston-martin-amb-3840x2160-18989.jpg");
+  background-image: url("aston-martin-amb-3840x2160-18989.jpg");
 
   /* Set a specific height */
   min-height: 650px;
@@ -444,13 +444,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: aliceblue;
-  z-index:-1;
 }
-
 
 #parallax3 {
   /* The image used */
-  background-image: linear-gradient(to bottom,transparent, rgba(0, 0, 0, 0.547)),url("ducati-streetfighter-v4-s-sports-bikes-dark-background-5k-3840x2160-8883.jpg");
+  background-image: url("ducati-streetfighter-v4-s-sports-bikes-dark-background-5k-3840x2160-8883.jpg");
 
   /* Set a specific height */
   min-height: 650px;
@@ -461,7 +459,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: aliceblue;
-
 }
 
 /* Login Page CSS */
