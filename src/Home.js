@@ -12,6 +12,10 @@ const Home=()=>{
             })}
           </CustomSlider>
         </div>
+        <div id="Best-selling-bikes">
+        <h1>Best Selling Bikes</h1>
+        </div>
+
         <ProductSlider />
         <div id="parallax">
           

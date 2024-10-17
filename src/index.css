@@ -421,7 +421,7 @@
   background-image: url("https://wallpapersmug.com/download/1920x1080/6fd911/ducati-panigale-v4-r-4k.jpg");
 
   /* Set a specific height */
-  min-height: 960px;
+  min-height: 700px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -436,7 +436,7 @@
   background-image: url("https://wallpapersmug.com/u/8a9660/bmw-m1000rr-bike-2020.jpg");
 
   /* Set a specific height */
-  min-height: 960px;
+  min-height: 700px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -732,10 +732,10 @@
 }
 
 .search-input {
-  width: 30%;
+  width: 35%;
   padding: 10px;
   border: 2px solid #ddd;
-  border-radius: 5px;
+  border-radius: 30px;
   font-size: 16px;
   outline: none;
   transition: border-color 0.3s ease;
@@ -746,15 +746,17 @@
 } */
 
 .search-button {
-  padding: 10px 15px;
+  padding: 8px 10px;
   margin-left: 10px;
   border: none;
   background-color: rgba(255, 63, 63, 0.873);
   color: white;
-  font-size: 16px;
-  border-radius: 5px;
+  font-size: 14px;
+  border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  position: relative;
+  right: 9%;
 }
 
 .search-button:hover {
