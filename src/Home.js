@@ -17,6 +17,7 @@ const Home=()=>{
         </div>
 
         <ProductSlider />
+
         <div id="parallax">
           
         </div>
