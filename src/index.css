@@ -418,7 +418,7 @@
 
 #parallax {
   /* The image used */
-  background-image: url("https://wallpapersmug.com/download/1920x1080/6fd911/ducati-panigale-v4-r-4k.jpg");
+  background-image: url("ducati-panigale-v4-r-4k.jpg");
 
   /* Set a specific height */
   min-height: 700px;
@@ -433,10 +433,25 @@
 
 #parallax2 {
   /* The image used */
-  background-image: url("https://wallpapersmug.com/u/8a9660/bmw-m1000rr-bike-2020.jpg");
+  background-image: url("aston-martin-amb-3840x2160-18989.jpg");
 
   /* Set a specific height */
-  min-height: 700px;
+  min-height: 650px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: aliceblue;
+}
+
+#parallax3 {
+  /* The image used */
+  background-image: url("ducati-streetfighter-v4-s-sports-bikes-dark-background-5k-3840x2160-8883.jpg");
+
+  /* Set a specific height */
+  min-height: 650px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
