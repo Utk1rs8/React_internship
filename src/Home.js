@@ -2,6 +2,7 @@ import React from "react";
 import images from "./Slider_images";
 import CustomSlider from "./Custom_slider";
 import ProductSlider from "./ProductSlider";
+import AsseccoriesSlider from "./AsseccoriesSlider";
 const Home=()=>{
     return(
         <>
@@ -29,7 +30,10 @@ const Home=()=>{
         <div id="parallax3">
           
         </div>
-        
+        <div id="Best-selling-bikes">
+        <h1>Accessories</h1>
+        </div>
+        <AsseccoriesSlider/>
         </>
     )
 }
