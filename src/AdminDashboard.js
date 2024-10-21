@@ -8,7 +8,8 @@ const AdminDashboard=()=>{
 
         <h1>Product Detail</h1>
         <Link to="../datainsert">datainsert</Link> |
-        <Link to="../sliderdetail">SliderDetail</Link>
+        <Link to="../sliderdetail">SliderDetail</Link>|
+        <Link to="../accessories">Accessories Details</Link>
         <Outlet/>
         </>
     )

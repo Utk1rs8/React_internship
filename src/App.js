@@ -10,7 +10,7 @@ import Registrationform from "./Registrationform";
 import Datainsert from "./Datainsert";
 import AdminDashboard from "./AdminDashboard";
 import SliderDetail from "./SliderDetail";
-
+import Accessories from "./Accessories";
 
 
 
@@ -30,8 +30,8 @@ const App=()=>{
               <Route path="registrationform" element={<Registrationform/>}/>
               <Route path="datainsert" element={<Datainsert/>}/>
               <Route path="sliderdetail" element={<SliderDetail/>}/>
+              <Route path="accessories" element={<Accessories/>}/>
               <Route path="Adminlogin" element={<AdminDashboard/>}/>
-              
             </Route>
            </Routes>
         </BrowserRouter>
