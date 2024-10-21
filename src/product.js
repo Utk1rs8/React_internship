@@ -9,7 +9,7 @@ const ProductCard = (props) => {
         <Card.Body>
           <Card.Title>{props.title}</Card.Title>
           <Card.Text>
-            {props.price}
+            ₹ {props.price}
           </Card.Text>
           <div className="product-actions">
             <Button id="Buy-now" variant="primary">Buy Now</Button>
