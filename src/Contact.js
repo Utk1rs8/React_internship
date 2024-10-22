@@ -2,12 +2,17 @@ const Contact=()=>
     {
         return(
             <>
-            <center>
-                <div className="abt-div">
-                    <h1 className="k-txt">get in touch</h1>
-                    <div className="a-txt-p1"><h1 className="a-txt1">Contact Us</h1></div>
-                </div>
-            </center>
+                <center>
+                    <div id="background-image">
+                        <div class="abt-div">
+                            <h1 class="k-txt">Get in Touch</h1>
+                            <div class="a-txt-p1">
+                                <h1 class="a-txt1">Contact Us</h1>
+                            </div>
+                        </div>
+                    </div>   
+                </center>
+
             <div className="map-div">
                 <div className="map-photo">
                     <img src="map.png" alt="not found" className="map-image"/>
