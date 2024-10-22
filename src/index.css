@@ -418,10 +418,10 @@
 
 #parallax {
   /* The image used */
-  background-image:url("ducati-panigale-v4-r-4k.jpg");
+  background-image: linear-gradient(to bottom,transparent, rgba(0, 0, 0, 0.585)),url("ducati-panigale-v4-r-4k.jpg");
 
   /* Set a specific height */
-  min-height: 700px;
+  min-height: 650px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -433,7 +433,7 @@
 
 #parallax2 {
   /* The image used */
-  background-image: url("aston-martin-amb-3840x2160-18989.jpg");
+  background-image: linear-gradient(to bottom,transparent, rgba(0, 0, 0, 0.585)),url("aston-martin-amb-3840x2160-18989.jpg");
 
   /* Set a specific height */
   min-height: 650px;
@@ -448,7 +448,7 @@
 
 #parallax3 {
   /* The image used */
-  background-image: url("ducati-streetfighter-v4-s-sports-bikes-dark-background-5k-3840x2160-8883.jpg");
+  background-image: linear-gradient(to bottom,transparent, rgba(0, 0, 0, 0.585)),url("ducati-streetfighter-v4-s-sports-bikes-dark-background-5k-3840x2160-8883.jpg");
 
   /* Set a specific height */
   min-height: 650px;
