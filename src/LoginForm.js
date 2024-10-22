@@ -4,7 +4,7 @@ import { FaUserAlt, FaLock } from 'react-icons/fa';   // Import icons
 import axios from 'axios'; // To make API calls
 
 const LoginForm = () => {
-    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [userType, setUserType] = useState('client');  // Default is client
     const [error, setError] = useState('');
@@ -17,7 +17,7 @@ const LoginForm = () => {
         try {
             // Make API request to validate username and password
             const response = await axios.post('http://127.0.0.1:8000/adminlogin/', {
-                username,
+                email,
                 password,
             });
 
@@ -63,10 +63,10 @@ const LoginForm = () => {
                     <div className="input-box">
                         <input
                             type="text"
-                            placeholder="Username"
+                            placeholder="Email"
                             required
-                            value={username}
-                            onChange={(e) => setUsername(e.target.value)}
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                         />
                         <FaUserAlt className='icon' />
                     </div>
