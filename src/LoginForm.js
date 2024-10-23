@@ -27,7 +27,7 @@ const LoginForm = () => {
             if (user) {
                 // If credentials match, navigate based on user type
                 if (userType === 'admin') {
-                    navigate('/adminDashboard');  // Redirect to admin dashboard
+                    navigate('/Adminlogin');  // Redirect to admin dashboard
                 } else {
                     navigate('/home');  // Redirect to client home page
                 }
