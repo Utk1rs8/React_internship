@@ -10,28 +10,29 @@ const LoginForm = () => {
     const [error, setError] = useState('');
     const navigate = useNavigate();  // For navigation
 
-    // Handle form submission
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    // Handle login when button is clicked
+    const handleSubmit = async () => {
+        // Determine the endpoint based on user type
+        const url = userType === 'admin'
+            ? 'http://127.0.0.1:8000/adminlogin/'  // Admin login endpoint
+            : 'http://127.0.0.1:8000/register/';   // Client login endpoint
 
         try {
-            // Make API request to validate username and password
-            const response = await axios.post('http://127.0.0.1:8000/adminlogin/', {
-                email,
-                password,
-            });
+            // Make API GET request to fetch user credentials
+            const response = await axios.get(url);
 
-            console.log(response.data); // Log the response to check the structure
+            // Assuming the API returns an array of users
+            const user = response.data.find((u) => u.email === email && u.password === password);
 
-            if (response.data.success) {  // Make sure `success` exists in the API response
-                // Based on user type, navigate to the appropriate page
+            if (user) {
+                // If credentials match, navigate based on user type
                 if (userType === 'admin') {
-                    navigate('/Adminlogin');  // Redirect to admin dashboard
+                    navigate('/adminDashboard');  // Redirect to admin dashboard
                 } else {
                     navigate('/home');  // Redirect to client home page
                 }
             } else {
-                setError('Invalid username or password');
+                setError('Invalid email or password');
             }
         } catch (err) {
             console.error(err);  // Log the error for debugging
@@ -42,64 +43,62 @@ const LoginForm = () => {
     return (
         <div id="Loginform">
             <div className='wrapper'>
-                <form onSubmit={handleSubmit}>
-                    <h1>Login</h1>
+                <h1>Login</h1>
 
-                    {/* Login As Selector */}
-                    <div>
-                        <label>Login As:</label>
-                        <select
-                            name="client_admin"
-                            id="client_admin"
-                            value={userType}
-                            onChange={(e) => setUserType(e.target.value)}
-                        >
-                            <option value="client">Client</option>
-                            <option value="admin">Admin</option>
-                        </select>
-                    </div>
+                {/* Login As Selector */}
+                <div>
+                    <label>Login As:</label>
+                    <select
+                        name="client_admin"
+                        id="client_admin"
+                        value={userType}
+                        onChange={(e) => setUserType(e.target.value)}
+                    >
+                        <option value="client">Client</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
 
-                    {/* Username Input */}
-                    <div className="input-box">
-                        <input
-                            type="text"
-                            placeholder="Email"
-                            required
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                        />
-                        <FaUserAlt className='icon' />
-                    </div>
+                {/* Email Input */}
+                <div className="input-box">
+                    <input
+                        type="text"
+                        placeholder="Email"
+                        required
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <FaUserAlt className='icon' />
+                </div>
 
-                    {/* Password Input */}
-                    <div className="input-box">
-                        <input
-                            type="password"
-                            placeholder="Password"
-                            required
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                        />
-                        <FaLock className='icon' />
-                    </div>
+                {/* Password Input */}
+                <div className="input-box">
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        required
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <FaLock className='icon' />
+                </div>
 
-                    {/* Remember Me and Forgot Password */}
-                    <div className="remember-forgot">
-                        <label><input type="checkbox" /> Remember me</label>
-                        <a href="#">Forgot password?</a>
-                    </div>
+                {/* Remember Me and Forgot Password */}
+                <div className="remember-forgot">
+                    <label><input type="checkbox" /> Remember me</label>
+                    <a href="#">Forgot password?</a>
+                </div>
 
-                    {/* Error Message */}
-                    {error && <p style={{ color: 'red' }}>{error}</p>}
+                {/* Error Message */}
+                {error && <p style={{ color: 'red' }}>{error}</p>}
 
-                    {/* Login Button */}
-                    <button type="submit">Login</button>
+                {/* Login Button - Calls handleSubmit */}
+                <button onClick={handleSubmit}>Login</button>
 
-                    {/* Register Link */}
-                    <div className="register-link">
-                        <p>Don't have an account? <Link to="/registrationform">Register</Link></p>
-                    </div>
-                </form>
+                {/* Register Link */}
+                <div className="register-link">
+                    <p>Don't have an account? <Link to="/registrationform">Register</Link></p>
+                </div>
             </div>
         </div>
     );
