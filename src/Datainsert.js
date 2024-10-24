@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from "axios";
+import Bikedatadisplay from './Bikedatadisplay';
 
 const Datainsert = () => {
     const [input, setInput] = useState({
@@ -50,6 +51,7 @@ const Datainsert = () => {
         const value = e.target.type === 'file' ? e.target.files[0] : e.target.value;
         setInput(values => ({ ...values, [name]: value }));
     }
+
 
     return (
         <>
@@ -106,6 +108,9 @@ const Datainsert = () => {
                 <input type="text" name="tourque" value={input.tourque} onChange={handleInput} />
             </div>
             <button onClick={insertData}>Insert</button>
+
+            <Bikedatadisplay/>
+
         </>
     );
 };

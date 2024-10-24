@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from "axios";
-
+import Accessoriesdatadisplay from './Accessoriesdatadisplay';
 
 const Accessories=()=>{
     const [input, setInput] = useState({});
@@ -52,7 +52,7 @@ const Accessories=()=>{
             </div>
             <button onClick={insertData}>Insert</button>
 
-
+            <Accessoriesdatadisplay/>
         </>
     )
 }

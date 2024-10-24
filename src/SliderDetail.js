@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from "axios";
-
+import Sliderdatadisplay from './Sliderdatadisplay';
 
 const SliderDetail=()=>{
     const [input, setInput] = useState({});
@@ -52,7 +52,7 @@ const SliderDetail=()=>{
             </div>
             <button onClick={insertData}>Insert</button>
 
-
+            <Sliderdatadisplay/>
         </>
     )
 }
