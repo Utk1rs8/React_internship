@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import SliderUpdate from './SliderUpdate'; // Import the SliderUpdate component
 
 const Sliderdatadisplay = () => {
     const [mydata, setmyData] = useState([]);
+    const [selectedSlider, setSelectedSlider] = useState(null); // State to hold the selected slider for editing
+    const [showUpdateForm, setShowUpdateForm] = useState(false); // State to control the visibility of the update form
 
     // Load data from the API
     const loadData = () => {
@@ -42,13 +45,22 @@ const Sliderdatadisplay = () => {
         }
     };
 
+    // Function to open the update form
+    const openUpdateForm = (slider) => {
+        setSelectedSlider(slider);
+        setShowUpdateForm(true);
+    };
+
     // Map through data and display it in a table
     const ans = mydata.map((key) => (
         <tr className="da" key={key.id}>
             <td>{key.name}</td>
             <td>{key.price}</td>
             <td><img src={key.image} alt={key.name} width="100" /></td> {/* Assuming image is a URL */}
-            <td><button onClick={() => deleteRecord(key.id)}>Delete</button></td> {/* Pass the id to delete */}
+            <td>
+                <button onClick={() => openUpdateForm(key)}>Edit</button> {/* Pass the slider data to edit */}
+                <button onClick={() => deleteRecord(key.id)}>Delete</button> {/* Pass the id to delete */}
+            </td>
         </tr>
     ));
 
@@ -62,7 +74,7 @@ const Sliderdatadisplay = () => {
                             <th>Emp name</th>
                             <th>Emp price</th>
                             <th>Emp image</th>
-                            <th>Delete Record</th>
+                            <th>Actions</th> {/* Change to Actions for clarity */}
                         </tr>
                     </thead>
                     <tbody>
@@ -70,6 +82,10 @@ const Sliderdatadisplay = () => {
                     </tbody>
                 </table>
             </center>
+
+            {showUpdateForm && (
+                <SliderUpdate slider={selectedSlider} onClose={() => setShowUpdateForm(false)} />
+            )}
         </>
     );
 };

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from "axios";
 import Sliderdatadisplay from './Sliderdatadisplay';
 
-const SliderDetail=()=>{
+const SliderDetail = () => {
     const [input, setInput] = useState({});
     const [imageFile, setImageFile] = useState(null); // New state for file
 
@@ -35,25 +35,27 @@ const SliderDetail=()=>{
         setImageFile(e.target.files[0]); // Update the image file state
     }
 
-
-    return(
+    return (
         <>
-             <div>
-                <label>Name:</label>
-                <input type="text" name="name" value={input.name || ''} onChange={handleInput} />
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" value={input.name || ''} onChange={handleInput} />
+                </div>
+                <div class="form-group">
+                    <label for="price">Price:</label>
+                    <input type="number" id="price" name="price" value={input.price || ''} onChange={handleInput} />
+                </div>
+                <div class="form-group">
+                    <label for="image">Image:</label>
+                    <input type="file" id="image" name="image" onChange={handleFileInput} /> {/* File input */}
+                </div>
+                <button class="submit-button" onClick={insertData}>Insert</button>
             </div>
-            <div>
-                <label>Price:</label>
-                <input type="number" name="price" value={input.price || ''} onChange={handleInput} />
-            </div>
-            <div>
-                <label>Image:</label>
-                <input type="file" name="image" onChange={handleFileInput} /> {/* File input */}
-            </div>
-            <button onClick={insertData}>Insert</button>
 
-            <Sliderdatadisplay/>
+            <Sliderdatadisplay />
         </>
-    )
+    );
 }
+
 export default SliderDetail;

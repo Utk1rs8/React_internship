@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import DataUpdate from './DataUpdate'; // Import the DataUpdate component
 
 const Bikedatadisplay = () => {
     const [mydata, setmyData] = useState([]);
+    const [selectedBike, setSelectedBike] = useState(null); // State to hold the selected bike for editing
+    const [showUpdateForm, setShowUpdateForm] = useState(false); // State to control the visibility of the update form
 
     // Load data from the API
     const loadData = () => {
@@ -42,6 +45,12 @@ const Bikedatadisplay = () => {
         }
     };
 
+    // Function to open the update form
+    const openUpdateForm = (bike) => {
+        setSelectedBike(bike);
+        setShowUpdateForm(true);
+    };
+
     // Map through data and display it in a table
     const ans = mydata.map((key) => (
         <tr className="da" key={key.id}>
@@ -56,7 +65,10 @@ const Bikedatadisplay = () => {
             <td>{key.fuel_tank}</td>
             <td>{key.power}</td>
             <td>{key.tourque}</td>
-            <td><button onClick={() => deleteRecord(key.id)}>Delete</button></td> {/* Pass the id to delete */}
+            <td>
+                <button onClick={() => openUpdateForm(key)}>Edit</button> {/* Pass the bike data to edit */}
+                <button onClick={() => deleteRecord(key.id)}>Delete</button> {/* Pass the id to delete */}
+            </td>
         </tr>
     ));
 
@@ -78,7 +90,7 @@ const Bikedatadisplay = () => {
                             <th>Emp fuel_tank</th>
                             <th>Emp power</th>
                             <th>Emp tourque</th>
-                            <th>Delete Record</th>
+                            <th>Actions</th> {/* Change to Actions for clarity */}
                         </tr>
                     </thead>
                     <tbody>
@@ -86,6 +98,10 @@ const Bikedatadisplay = () => {
                     </tbody>
                 </table>
             </center>
+
+            {showUpdateForm && (
+                <DataUpdate bike={selectedBike} onClose={() => setShowUpdateForm(false)} />
+            )}
         </>
     );
 };

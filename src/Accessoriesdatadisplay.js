@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import AccessoriesUpdate from './AccessoriesUpdate'; // Import the update component
 
 const Accessoriesdatadisplay = () => {
     const [mydata, setmyData] = useState([]);
+    const [selectedAccessory, setSelectedAccessory] = useState(null); // State to track the selected accessory for editing
 
     // Load data from the API
     const loadData = () => {
@@ -42,13 +44,21 @@ const Accessoriesdatadisplay = () => {
         }
     };
 
+    // Function to handle edit
+    const handleEdit = (accessory) => {
+        setSelectedAccessory(accessory); // Set the selected accessory to edit
+    };
+
     // Map through data and display it in a table
     const ans = mydata.map((key) => (
         <tr className="da" key={key.id}>
             <td>{key.name}</td>
             <td>{key.price}</td>
             <td><img src={key.image} alt={key.name} width="100" /></td> {/* Assuming image is a URL */}
-            <td><button onClick={() => deleteRecord(key.id)}>Delete</button></td> {/* Pass the id to delete */}
+            <td>
+                <button onClick={() => handleEdit(key)}>Edit</button> {/* Button to edit the record */}
+                <button onClick={() => deleteRecord(key.id)}>Delete</button> {/* Pass the id to delete */}
+            </td>
         </tr>
     ));
 
@@ -62,7 +72,7 @@ const Accessoriesdatadisplay = () => {
                             <th>Emp name</th>
                             <th>Emp price</th>
                             <th>Emp image</th>
-                            <th>Delete Record</th>
+                            <th>Actions</th> {/* Updated header to include actions */}
                         </tr>
                     </thead>
                     <tbody>
@@ -70,6 +80,7 @@ const Accessoriesdatadisplay = () => {
                     </tbody>
                 </table>
             </center>
+            {selectedAccessory && <AccessoriesUpdate accessory={selectedAccessory} onClose={() => setSelectedAccessory(null)} />} {/* Render the update form if an accessory is selected */}
         </>
     );
 };
