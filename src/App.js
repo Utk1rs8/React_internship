@@ -11,6 +11,7 @@ import Datainsert from "./Datainsert";
 import AdminDashboard from "./AdminDashboard";
 import SliderDetail from "./SliderDetail";
 import Accessories from "./Accessories";
+import BikeDetails from "./Bikedetails";
 
 
 
@@ -23,6 +24,7 @@ const App=()=>{
               <Route index element={<Home/>} />
               <Route path="home" element={<Home/>} />
               <Route path="bike" element={<Bike/>}/>
+              <Route path="/bikedetails/:id" element={<BikeDetails/>} />
               <Route path="service" element={<Service/>}/>
               <Route path="about" element={<About/>}/>
               <Route path="contact" element={<Contact/>}/>
