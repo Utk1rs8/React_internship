@@ -1,9 +1,12 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { addtoCart } from "./cartSlice";
 
 const BikeDetails = () => {
   const { id } = useParams();
+  const dispatch= useDispatch();
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
@@ -30,6 +33,7 @@ const BikeDetails = () => {
       <h1>Fuel Tank:{product.fuel_tank}</h1>
       <h1>Power:{product.power}</h1>
       <h1>Torque:{product.tourque}</h1>
+      <button onClick={()=>{dispatch(addtoCart({id:product.id, name:product.name, price:product.price, image:product.image }))}}>Add to Cart</button>
     </div>
     </>
   );

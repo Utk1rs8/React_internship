@@ -23,38 +23,6 @@ const cartSlice= createSlice({
         
         },
 
-        addQTY:(state, action)=>{
-            let id=action.payload.id;
-           
-           for (var i=0; i<state.cart.length; i++)
-           {
-            if (state.cart[i].id==id)
-            {
-                state.cart[i].qnty++;
-            }
-           }
-
-        },
-        removeQTY:(state, action)=>{
-            let id=action.payload.id;
-           
-           for (var i=0; i<state.cart.length; i++)
-           {
-            if (state.cart[i].id==id)
-            {
-                if (state.cart[i].qnty<=1)
-                {
-                    alert("atlest one product necessary!!");
-                }
-                else 
-                {
-                state.cart[i].qnty--;
-                }
-            }
-           }
-
-        },
-
        removeItem:(state, action)=>{
           state.cart=state.cart.filter((item)=>item.id!=action.payload);
        },
@@ -65,5 +33,5 @@ const cartSlice= createSlice({
     }
 });
 
-export const {addtoCart, addQTY, removeQTY, removeItem, cartEmpty}= cartSlice.actions;
+export const {addtoCart, removeItem, cartEmpty}= cartSlice.actions;
 export default cartSlice.reducer;

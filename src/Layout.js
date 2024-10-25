@@ -15,7 +15,7 @@ const Layout=()=>{
 
                 <div id="Cartandlog">
                      <div id="cart">
-                        <Link id="carticon"><FaShoppingCart/></Link>
+                        <Link to="cartitem" id="carticon"><FaShoppingCart/></Link>
                     </div>
                      <div id="logreg">
                         <Link id="loginform" to="loginform">Login</Link>

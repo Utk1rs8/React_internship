@@ -12,6 +12,7 @@ import AdminDashboard from "./AdminDashboard";
 import SliderDetail from "./SliderDetail";
 import Accessories from "./Accessories";
 import BikeDetails from "./Bikedetails";
+import CartItem from "./Cartitem";
 
 
 
@@ -34,6 +35,7 @@ const App=()=>{
               <Route path="sliderdetail" element={<SliderDetail/>}/>
               <Route path="accessories" element={<Accessories/>}/>
               <Route path="Adminlogin" element={<AdminDashboard/>}/>
+              <Route path="cartitem" element={<CartItem/>} />
             </Route>
            </Routes>
         </BrowserRouter>
