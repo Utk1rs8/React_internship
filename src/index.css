@@ -544,7 +544,15 @@
     font-size: 20px;
   }
 }
-
+/* Best-selling-bikes */
+#Best-selling-bikes h1{
+  font-family: "Racing Sans One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 48px;
+}
 
 /* paralax */
 
@@ -592,7 +600,29 @@
   background-size: cover;
   color: aliceblue;
 }
+/* Bike-video */
 
+#Bike-video
+{
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; 
+  padding:40px;
+  background-color: #e7e7e7f5;
+}
+#Born-to-race h1
+{
+  background-color:#e7e7e7f5 ;
+  font-family: "Racing Sans One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  /* margin-top: 20px; */
+  font-size: 58px;
+  padding: 20px;
+  margin-bottom: -20px;
+  
+}
 /* Login Page CSS */
 #client_admin
 {
