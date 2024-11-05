@@ -1239,7 +1239,13 @@
 #parallex-Button{
     border: 1px solid white;
     width:100px;
-    background:darkred;
-    margin: 5px 55px;
+    background:orangered;
+    margin: 5px 55px; 
+    
 }
-
+#parallex-Button a{
+  color: white;
+  text-decoration: none;
+  margin: 3px;
+  font-size: 16px;
+}
