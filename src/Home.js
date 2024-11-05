@@ -44,6 +44,14 @@ const Home=()=>{
         <div id="parallax3">
           
         </div>
+        <div id="Born-to-race">
+        <h1>#Born To Race</h1>
+        </div>
+        <div id="Bike-video">
+          <video loop autoplay muted  width="70%" >
+             <source src="bike vid - Made with Clipchamp.mp4" type="video/mp4"/>
+          </video>
+        </div>
         </>
     )
 }
