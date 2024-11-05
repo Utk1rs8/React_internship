@@ -1129,3 +1129,19 @@
     font-size: 14px;
   }
 }
+#parallax-container{
+  width: 520px;
+  /* border: 2px solid white; */
+  padding: 80px 60px;
+}
+#parallax-ListItem{
+     width: 520px;
+    /* border: 2px solid white; */
+    padding: 5px 55px;
+}
+#parallex-Button{
+    border: 1px solid white;
+    width:100px;
+    background:darkred;
+}
+
