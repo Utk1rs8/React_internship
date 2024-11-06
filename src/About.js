@@ -29,18 +29,18 @@ const About = () => {
         <div className="team-grid">
           <div className="team-member">
             <img src="utku.jpg" alt="Team Member 1" />
-            <h3>John Doe</h3>
-            <p>CEO & Founder</p>
+            <h3>Utkarsh Churariya</h3>
+            <p>CEO & Founder & Lead</p>
           </div>
           <div className="team-member">
             <img src="dev.jpg" alt="Team Member 2" />
-            <h3>Jane Smith</h3>
-            <p>Lead Developer</p>
+            <h3>Devanshu Vishwakarma</h3>
+            <p>BackEnd Developer</p>
           </div>
           <div className="team-member">
-            <img src="https://via.placeholder.com/150" alt="Team Member 3" />
-            <h3>Bob Johnson</h3>
-            <p>UI/UX Designer</p>
+              <img src="nishu.jpeg" alt="Team Member 3" />
+            <h3>Nishant Malviya</h3>
+              <p>FrontEnd Developer</p>
           </div>
         </div>
       </div>
