@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 
 
 const Service=()=>{
@@ -13,31 +13,25 @@ const Service=()=>{
             
             <section className="service-list">
                 <div className="service-item">
-                <h2>Basic Tune-Up</h2>
-                <p>Includes brake adjustments, gear tuning, and chain lubrication. Perfect for regular maintenance.</p>
-                <span className="price">$50</span>
+                <Link to="../subscriptionpage" style={{textDecoration:'none'}} ><h2>Subscription Plans</h2></Link>
+                <p> Details of different plans available, such as monthly, quarterly, or annual subscriptions. These may include tiered options (e.g., Basic, Standard, Premium) with varying levels of benefits and pricing.</p>
                 </div>
                 <div className="service-item">
-                <h2>Advanced Tune-Up</h2>
-                <p>Everything in the Basic Tune-Up plus a detailed inspection of the bike’s components.</p>
-                <span className="price">$90</span>
+                <h2>Maintenance</h2>
+                <p>Briefly describe the types of maintenance services offered, like tune-ups, repairs, tire replacements, chain adjustments, and brake inspections.Emphasize the importance of regular maintenance for longevity and performance.</p>
                 </div>
                 <div className="service-item">
-                <h2>Full Overhaul</h2>
-                <p>A comprehensive service to ensure your bike is performing at its best, including a full breakdown and rebuild.</p>
-                <span className="price">$200</span>
+                <h2>Spare Parts</h2>
+                <p>Clearly defined categories, such as "Brakes," "Tires & Tubes," "Chains," "Pedals," "Gears & Derailleurs," and "Suspension." This helps users quickly find the parts they need.</p>
                 </div>
                 <div className="service-item">
-                <h2>Custom Builds</h2>
-                <p>Work with our experts to build the bike of your dreams. From frame selection to component installation.</p>
-                <span className="price">Contact for pricing</span>
+                <h2>Thanks For Supporting</h2>
+                <p>Express gratitude for the purchase and welcome the customer to the brand's community of riders.</p>
+                <h2>#Born To Race</h2>
                 </div>
             </section>
             
-            <footer className="service-footer">
-                <p>Contact us to schedule your bike service or visit our shop for more details!</p>
-                <button className="contact-button">Get in Touch</button>
-            </footer>
+
         </div>
         </>
     )

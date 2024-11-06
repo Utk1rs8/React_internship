@@ -13,6 +13,8 @@ import SliderDetail from "./SliderDetail";
 import Accessories from "./Accessories";
 import BikeDetails from "./Bikedetails";
 import CartItem from "./Cartitem";
+import BuyNow from "./BuyNow";
+import SubscriptionPage from "./SubscriptionPage";
 
 
 
@@ -36,6 +38,8 @@ const App=()=>{
               <Route path="accessories" element={<Accessories/>}/>
               <Route path="Adminlogin" element={<AdminDashboard/>}/>
               <Route path="cartitem" element={<CartItem/>} />
+              <Route path="buynow" element={<BuyNow/>} />
+              <Route path="subscriptionpage" element={<SubscriptionPage/>} />
             </Route>
            </Routes>
         </BrowserRouter>

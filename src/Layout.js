@@ -89,7 +89,7 @@ const Layout = () => {
                     <div className="subnav">
                         <Link id="Link" to="service">Service</Link>
                         <div className="subnav-content">
-                            <Link className="SubnavLink">SUBSCRIPTION</Link>
+                            <Link to="subscriptionpage" className="SubnavLink">SUBSCRIPTION</Link>
                             <Link className="SubnavLink">SERVICE MAINTENANCE</Link>
                             <Link className="SubnavLink">SPARE PART</Link>
                         </div>
