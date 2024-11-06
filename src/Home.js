@@ -22,7 +22,7 @@ const Home=()=>{
         <div id="parallax">
           <div id="parallax-container">
             <h4>Discover The Collection</h4>
-            <h1>Sport Bikes</h1>
+            <h1>SPORTS Bikes</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus.</p>
           </div> 
           <div id="parallax-ListItem">
@@ -38,11 +38,39 @@ const Home=()=>{
         </div>
 
         <div id="parallax2">
-          
+          <div id="parallax-container">
+            <h4>Discover The Collection</h4>
+            <h1>CRUISER Bikes</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus.</p>
+          </div>
+          <div id="parallax-ListItem">
+            <ul>
+              <li>Officia deserunt mollit</li>
+              <li>Sunt in culpa qui</li>
+              <li>Excepteur sint occaecat</li>
+            </ul>
+          </div>
+          <div id="parallex-Button">
+            <a href="#">Explore Now</a>
+          </div>
         </div>
         
         <div id="parallax3">
-          
+          <div id="parallax-container">
+            <h4>Discover The Collection</h4>
+            <h1>TOURING Bikes</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus.</p>
+          </div>
+          <div id="parallax-ListItem">
+            <ul>
+              <li>Officia deserunt mollit</li>
+              <li>Sunt in culpa qui</li>
+              <li>Excepteur sint occaecat</li>
+            </ul>
+          </div>
+          <div id="parallex-Button">
+            <a href="#">Explore Now</a>
+          </div>
         </div>
         <div id="Born-to-race">
         <h1>#Born To Race</h1>
