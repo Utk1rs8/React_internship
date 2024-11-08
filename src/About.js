@@ -18,8 +18,7 @@ const About = () => {
         <div className="about-content">
           <h2>Our Story</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet lectus auctor, tincidunt risus nec, convallis arcu. Suspendisse potenti. 
-            Our team consists of passionate individuals who strive to deliver high-quality products and services.
+          At [Ride It], we’re passionate about Riding and dedicated to helping you find the perfect bike and accessories to enhance your journey. Founded by a team of avid bikers, our mission is to make high-quality bikes and gear accessible to riders of all levels. Whether you're a seasoned rider or just starting out, we believe in empowering everyone to experience the freedom and adventure that biking brings.
           </p>
         </div>
       </div>

@@ -716,7 +716,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
-  background: url('./bike.jpg') no-repeat;
+  background: url('/public/honda-cbr650r-2024-3840x2160-13405.jpg') no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -879,6 +879,7 @@
 /* About CSS */
 .about-page {
   padding: 20px;
+  background-color: rgb(241, 239, 239);
 
 }
 
@@ -1044,8 +1045,8 @@
 .shoe-box
 {
   padding: 30px;
-  background-color: rgba(235, 235, 235, 0.89);
-  width: 300px;
+  background-color: white;
+  width: 400px;
   margin: 50px;
 }
 .product-box
@@ -1091,10 +1092,10 @@
     margin-top: 10px; 
 
 }
-.shop-div
+/* .shop-div
 {
-  background-color: rgba(235, 235, 235, 0.89);
-}
+  background-color: whitesmoke;
+} */
 .head-shop
 {
   display: flex;
