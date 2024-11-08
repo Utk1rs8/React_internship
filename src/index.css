@@ -1264,6 +1264,12 @@
     font-size: 14px;
   }
 }
+#parallax-all
+{
+  float: right;
+  /* text-align: right; */
+
+}
 #parallax-container{
   width: 520px;
   /* border: 2px solid white; */
