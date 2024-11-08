@@ -78,12 +78,12 @@ const Layout = () => {
                     <div className="subnav">
                         <Link id="Link" to="Bike">Bikes</Link>
                         <div className="subnav-content">
-                            <Link className="SubnavLink">TOURING BIKES</Link>
-                            <Link className="SubnavLink">NAKED BIKES</Link>
-                            <Link className="SubnavLink">SPORT BIKES</Link>
-                            <Link className="SubnavLink">ADVENTURE BIKES</Link>
-                            <Link className="SubnavLink">CRUISER BIKES</Link>
-                            <Link className="SubnavLink">CAFE RACER BIKES</Link>
+                            <Link to="touringbikes" className="SubnavLink">TOURING BIKES</Link>
+                            <Link to="nakedbikes" className="SubnavLink">NAKED BIKES</Link>
+                            <Link to="sportbikes" className="SubnavLink">SPORT BIKES</Link>
+                            <Link to="adventurebikes" className="SubnavLink">ADVENTURE BIKES</Link>
+                            <Link to="cruiserbikes" className="SubnavLink">CRUISER BIKES</Link>
+                            <Link to="caferacerbikes" className="SubnavLink">CAFE RACER BIKES</Link>
                         </div>
                     </div>
                     <div className="subnav">

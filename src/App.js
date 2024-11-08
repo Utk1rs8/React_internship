@@ -15,6 +15,12 @@ import BikeDetails from "./Bikedetails";
 import CartItem from "./Cartitem";
 import BuyNow from "./BuyNow";
 import SubscriptionPage from "./SubscriptionPage";
+import AdventureBikes from "./AdventureBikes";
+import CafeRacerBikes from "./CafeRacerBikes";
+import NakedBikes from "./NakedBikes";
+import SportsBikes from "./SportsBikes";
+import CruiserBikes from "./CruiserBikes";
+import TouringBikes from "./TouringBikes";
 
 
 
@@ -39,8 +45,12 @@ const App=()=>{
               <Route path="Adminlogin" element={<AdminDashboard/>}/>
               <Route path="cartitem" element={<CartItem/>} />
               <Route path="buynow" element={<BuyNow/>} />
-              <Route path="subscriptionpage" element={<SubscriptionPage/>} />
-            </Route>
+              <Route path="adventurebikes" element={<AdventureBikes/>} />
+              <Route path="caferacerbikes" element={<CafeRacerBikes/>} />
+              <Route path="nakedbikes" element={<NakedBikes/>} />
+              <Route path="sportbikes" element={<SportsBikes/>} />
+              <Route path="cruiserbikes" element={<CruiserBikes/>} />
+              <Route path="touringbikes" element={<TouringBikes/>} />            </Route>
            </Routes>
         </BrowserRouter>
           
