@@ -1044,8 +1044,8 @@
 .shoe-box
 {
   padding: 30px;
-  background-color: rgba(235, 235, 235, 0.89);
-  width: 300px;
+  background-color: white;
+  width: 400px;
   margin: 50px;
 }
 .product-box
@@ -1093,7 +1093,7 @@
 }
 .shop-div
 {
-  background-color: rgba(235, 235, 235, 0.89);
+  /* background-color: whitesmoke; */
 }
 .head-shop
 {
