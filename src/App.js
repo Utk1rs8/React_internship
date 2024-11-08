@@ -45,6 +45,7 @@ const App=()=>{
               <Route path="Adminlogin" element={<AdminDashboard/>}/>
               <Route path="cartitem" element={<CartItem/>} />
               <Route path="buynow" element={<BuyNow/>} />
+              <Route path="subscriptionpage" element={<SubscriptionPage/>} />
               <Route path="adventurebikes" element={<AdventureBikes/>} />
               <Route path="caferacerbikes" element={<CafeRacerBikes/>} />
               <Route path="nakedbikes" element={<NakedBikes/>} />
