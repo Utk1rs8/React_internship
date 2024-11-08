@@ -11,10 +11,7 @@ const ProductCard = (props) => {
           <Card.Text>
             ₹ {props.price}
           </Card.Text>
-          <div className="product-actions">
-            <Button id="Buy-now" variant="primary">Buy Now</Button>
-            <Button id="Add-to-Cart" variant="secondary">Add to Cart</Button>
-          </div>
+
         </Card.Body>
       </Card>
     </>
