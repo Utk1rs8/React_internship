@@ -715,7 +715,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
-  background: url('./bike.jpg') no-repeat;
+  background: url('/public/honda-cbr650r-2024-3840x2160-13405.jpg') no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -878,6 +878,7 @@
 /* About CSS */
 .about-page {
   padding: 20px;
+  background-color: rgb(241, 239, 239);
 
 }
 
