@@ -23,13 +23,13 @@ const Home=()=>{
           <div id="parallax-container">
             <h4>Discover The Collection</h4>
             <h1>SPORTS Bikes</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus.</p>
+            <p>A sports bike is a high-performance motorcycle designed for speed, agility, and precise handling, featuring a powerful engine, lightweight frame, and aerodynamic design for fast riding and cornering.</p>
           </div> 
           <div id="parallax-ListItem">
             <ul>
-              <li>Officia deserunt mollit</li>
-              <li>Sunt in culpa qui</li>
-              <li>Excepteur sint occaecat</li>
+              <li>High-performance engine</li>
+              <li>Aerodynamic design</li>
+              <li>Responsive handling</li>
             </ul>
           </div>
           <div id="parallex-Button">
@@ -38,20 +38,22 @@ const Home=()=>{
         </div>
 
         <div id="parallax2">
-          <div id="parallax-container">
-            <h4>Discover The Collection</h4>
-            <h1>CRUISER Bikes</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus.</p>
-          </div>
-          <div id="parallax-ListItem">
-            <ul>
-              <li>Officia deserunt mollit</li>
-              <li>Sunt in culpa qui</li>
-              <li>Excepteur sint occaecat</li>
-            </ul>
-          </div>
-          <div id="parallex-Button">
-            <a href="#">Explore Now</a>
+          <div id="parallax-all">
+            <div id="parallax-container">
+              <h4>Discover The Collection</h4>
+              <h1>CRUISER Bikes</h1>
+              <p>Cruiser bikes are motorcycles known for their low, relaxed riding position, larger engines, and classic design. Built for comfort and long-distance cruising, they offer a smooth ride on highways and open roads.</p>
+            </div>
+            <div id="parallax-ListItem">
+              <ul>
+                <li>Comfortable riding position</li>
+                <li>Large-displacement engines</li>
+                <li>Classic styling</li>
+              </ul>
+            </div>
+            <div id="parallex-Button">
+              <a href="#">Explore Now</a>
+              </div>
           </div>
         </div>
         
@@ -59,13 +61,13 @@ const Home=()=>{
           <div id="parallax-container">
             <h4>Discover The Collection</h4>
             <h1>TOURING Bikes</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus.</p>
+            <p>Touring bikes are designed for long-distance travel, prioritizing comfort, storage, and advanced features for riders on extended journeys.</p>
           </div>
           <div id="parallax-ListItem">
             <ul>
-              <li>Officia deserunt mollit</li>
-              <li>Sunt in culpa qui</li>
-              <li>Excepteur sint occaecat</li>
+              <li>Advanced comfort</li>
+              <li>Extensive storage</li>
+              <li>High-tech features</li>
             </ul>
           </div>
           <div id="parallex-Button">
