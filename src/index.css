@@ -1057,14 +1057,18 @@
 }
 .prod-nam
 {
-  font-family:Calibri;
-  font-size: 20px;
+  font-family: "Play", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
   margin-top: 5px;
 }
 .prod-pri2
 {
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 15px;
+  font-family: "Mate SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
   margin-top: 5px;
 
 }
@@ -1235,8 +1239,8 @@
 
 /* Submit button styling */
 .submit-button {
-  width: 100%;
-  padding: 10px;
+  width: 30%;
+  padding: 8px;
   background-color:rgba(255, 63, 63, 0.885);
   color: white;
   font-size: 18px;
@@ -1244,6 +1248,7 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+
 }
 
 .submit-button:hover {
@@ -1281,7 +1286,7 @@
           font-style: normal;
 }
 #parallax-container h1 {
-font-family: "Racing Sans One", sans-serif;
+  font-family: "Racing Sans One", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -1294,17 +1299,20 @@ font-family: "Racing Sans One", sans-serif;
     /* border: 1px solid white; */
     font-size: 25px;
     width:130px;
-    background:orangered;
+    background: rgb(254, 7, 7);
     margin: 7px 70px; 
-    
+    border-radius: 3px;
 }
 #parallex-Button a{
-  color: white;
+  font-weight: lighter;
+  font-family:"Racing Sans One", sans-serif;
+  color: whitesmoke;
   text-decoration: none;
   margin: 15px;
   position: relative;
   bottom: 6px ;
   font-size: 17px;
+
 }
 /* subscription page */
 #subscription-premium {
@@ -1454,4 +1462,905 @@ font-family: "Racing Sans One", sans-serif;
   border: 0;
   border-radius: 9999px;
   box-shadow: inset 0 -2px 25px -4px var(--white);
+}
+/* Bike Detail Page Css */
+
+/* Loading Screen */
+.loading {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2rem;
+}
+
+/* Bike Details Section */
+.bike-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.bike--image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.bike-info {
+  text-align: center;
+  padding: 10px;
+}
+
+.bike-name {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-family: "Racing Sans One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bike-price {
+  font-size: 1.5rem;
+  color: #ff0101;
+  margin-bottom: 15px;
+  font-family: "Mate SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bike-spec {
+  font-size: 1rem;
+  color: #1e1e1e;
+  margin: 5px 0;
+  font-weight: 500;
+  font-family: "Play", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.add-to-cart-button {
+  background-color: #fc3131f5;
+  color: #fff;
+  padding: 6px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-family: "Jaldi", sans-serif;
+  font-weight: 700;
+  font-style: normal
+
+}
+
+.add-to-cart-button:hover {
+  background-color: #f10202;
+}
+
+/* Responsive Styling */
+@media (min-width: 768px) {
+  .bike-details {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .bike-image, .bike-info {
+    width: 50%;
+  }
+
+  .bike-info {
+    text-align: left;
+    padding: 20px;
+  }
+
+  .bike-name {
+    font-size: 2.5rem;
+  }
+
+  .bike-price {
+    font-size: 2rem;
+  }
+
+  .add-to-cart-button {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bike-name {
+    font-size: 1.8rem;
+  }
+
+  .bike-price {
+    font-size: 1.3rem;
+  }
+
+  .bike-spec {
+    font-size: 0.9rem;
+  }
+
+  .add-to-cart-button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}
+
+/* Cartitem Page CSS */
+.cart-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.cart-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: "Racing Sans One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Cart Table */
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  
+}
+
+.cart-header-row {
+  background-color: rgb(30, 30, 30);
+  color: whitesmoke;
+
+}
+
+.cart-header {
+  padding: 10px;
+  text-align: left;
+  font-size: 1.1rem;
+  font-family: "Play", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.cart-item-row {
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-item-photo,
+.cart-item-name,
+.cart-item-price {
+  padding: 16px;
+  text-align: left;
+  font-family: "Play", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cart-item-photo img {
+  width: 80px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-remove-item {
+  background-color: #fd3737;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.btn-remove-item:hover {
+  background-color: #fb0303;
+}
+
+/* Buy Now Button */
+.cart-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-buy-now {
+  background-color: #ff2727;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-buy-now:hover {
+  background-color: #ef0000;
+}
+
+/* Responsive Styling */
+@media (min-width: 768px) {
+  .cart-title {
+      font-size: 2.5rem;
+  }
+
+  .cart-table {
+      width: 90%;
+      margin: auto;
+  }
+
+  .cart-item-photo img {
+      width: 100px;
+  }
+
+  .btn-remove-item, .btn-buy-now {
+      padding: 10px 20px;
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-title {
+      font-size: 1.8rem;
+  }
+
+  .cart-header, .cart-item-photo, .cart-item-name, .cart-item-price {
+      font-size: 0.9rem;
+  }
+
+  .btn-remove-item, .btn-buy-now {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+  }
+}
+
+/* AdminDashboard page CSS */
+
+#admin-dashboard {
+  padding: 20px;
+  text-align: center;
+}
+
+.dashboard-title {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+
+.dashboard-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.dashboard-link {
+  font-size: 1.5em;
+  color: #007BFF;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.Seprate-line
+{
+  font-size: 1.5em;
+}
+
+.dashboard-link:hover {
+  color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .dashboard-title {
+      font-size: 1.8em;
+  }
+
+  .section-title {
+      font-size: 1.4em;
+  }
+
+  .dashboard-link {
+      font-size: 1em;
+  }
+    .Seprate-line
+  {
+    font-size: 1em;
+  }
+}
+
+/* BikeDataDisplay CSS */
+
+#bike-data-display {
+  padding: 20px;
+  text-align: center;
+}
+
+.display-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.bike-table {
+  width: 90%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.bike-table, .bike-table th, .bike-table td {
+  border: 1px solid #ddd;
+}
+
+.table-header {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.bike-row:hover {
+  background-color: #f9f9f9;
+}
+
+.bike-table th, .bike-table td {
+  padding: 10px;
+  text-align: center;
+}
+
+.bike-image {
+  width: 80px;
+  height: auto;
+}
+
+.edit-button, .delete-button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .display-title {
+      font-size: 1.5em;
+  }
+
+  .bike-table th, .bike-table td {
+      padding: 5px;
+      font-size: 0.9em;
+  }
+
+  .edit-button, .delete-button {
+      padding: 5px;
+      font-size: 0.8em;
+  }
+}
+
+/* BikeDataUpdate CSS */
+
+.bike-update-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.bike-update-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.bike-update-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.bike-update-form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.bike-update-form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.bike-update-form-group input,
+.bike-update-form-group select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.bike-update-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.bike-update-button,
+.bike-cancel-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.bike-update-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.bike-cancel-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+  .bike-update-container {
+      padding: 10px;
+  }
+
+  .bike-update-form {
+      gap: 5px;
+  }
+
+  .bike-update-form-group {
+      width: 100%;
+  }
+  
+  .bike-update-button,
+  .bike-cancel-button {
+      font-size: 14px;
+      padding: 8px 15px;
+  }
+}
+
+/* SliderDataDisplay CSS */
+
+
+#bike-data-display {
+  padding: 20px;
+  text-align: center;
+}
+
+.display-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.bike-table {
+  width: 90%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.bike-table, .bike-table th, .bike-table td {
+  border: 1px solid #ddd;
+}
+
+.table-header {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.bike-row:hover {
+  background-color: #f9f9f9;
+}
+
+.bike-table th, .bike-table td {
+  padding: 10px;
+  text-align: center;
+}
+
+.bike-image {
+  width: 80px;
+  height: auto;
+}
+
+.edit-button, .delete-button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .display-title {
+    font-size: 1.5em;
+  }
+
+  .bike-table th, .bike-table td {
+    padding: 5px;
+    font-size: 0.9em;
+  }
+
+  .edit-button, .delete-button {
+    padding: 5px;
+    font-size: 0.8em;
+  }
+}
+
+/* Accessory Data Display CSS */
+
+#accessory-data-display {
+  padding: 20px;
+  text-align: center;
+}
+
+.display-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.accessory-table {
+  width: 90%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.accessory-table, .accessory-table th, .accessory-table td {
+  border: 1px solid #ddd;
+}
+
+.table-header {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.accessory-row:hover {
+  background-color: #f9f9f9;
+}
+
+.accessory-table th, .accessory-table td {
+  padding: 10px;
+  text-align: center;
+}
+
+.accessory-image {
+  width: 80px;
+  height: auto;
+}
+
+.edit-button, .delete-button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .display-title {
+    font-size: 1.5em;
+  }
+
+  .accessory-table th, .accessory-table td {
+    padding: 5px;
+    font-size: 0.9em;
+  }
+
+  .edit-button, .delete-button {
+    padding: 5px;
+    font-size: 0.8em;
+  }
+}
+
+/* AccessoryUpdate CSS*/
+.accessory-update-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.accessory-update-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.accessory-update-form {
+  margin-bottom: 20px;
+}
+
+.accessory-update-form-group {
+  margin-bottom: 15px;
+}
+
+.accessory-update-form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.accessory-update-form-group input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.accessory-update-actions {
+  text-align: center;
+}
+
+.accessory-update-button, .accessory-cancel-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.accessory-update-button {
+  background-color: #4CAF50;
+  color: white;
+  margin-right: 10px;
+}
+
+.accessory-cancel-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.accessory-update-button:hover, .accessory-cancel-button:hover {
+  opacity: 0.8;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .accessory-update-title {
+    font-size: 1.5em;
+  }
+
+  .accessory-update-form-group input {
+    font-size: 0.9em;
+  }
+
+  .accessory-update-button, .accessory-cancel-button {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+}
+
+/* Accessory Update CSS*/
+.accessory-update-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.accessory-update-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.accessory-update-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.accessory-update-form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.accessory-update-form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.accessory-update-form-group input,
+.accessory-update-form-group select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.accessory-update-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.accessory-update-button,
+.accessory-cancel-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.accessory-update-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.accessory-cancel-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+  .accessory-update-container {
+      padding: 10px;
+  }
+
+  .accessory-update-form {
+      gap: 5px;
+  }
+
+  .accessory-update-form-group {
+      width: 100%;
+  }
+
+  .accessory-update-button,
+  .accessory-cancel-button {
+      font-size: 14px;
+      padding: 8px 15px;
+  }
+}
+
+
+/* BuyNow Component CSS */
+.buy-now-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.buy-now-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.buy-now-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.buy-now-input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.input-field {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.buy-now-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.payment-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #ff2f2f;
+  color: white;
+}
+
+.payment-button:hover {
+  background-color: #ff0000;
+}
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+  .buy-now-container {
+    padding: 10px;
+  }
+
+  .buy-now-input-group {
+    gap: 8px;
+  }
+
+  .input-field {
+    font-size: 13px;
+    padding: 6px;
+  }
+
+  .payment-button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
 }

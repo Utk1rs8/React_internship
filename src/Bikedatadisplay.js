@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import DataUpdate from './DataUpdate'; // Import the DataUpdate component
+import DataUpdate from './BikeDataUpdate'; // Import the DataUpdate component
 
 const Bikedatadisplay = () => {
     const [mydata, setmyData] = useState([]);
@@ -53,11 +53,11 @@ const Bikedatadisplay = () => {
 
     // Map through data and display it in a table
     const ans = mydata.map((key) => (
-        <tr className="da" key={key.id}>
+        <tr className="bike-row" key={key.id}>
             <td>{key.name}</td>
             <td>{key.biketype}</td>
             <td>{key.price}</td>
-            <td><img src={key.image} alt={key.name} width="100" /></td> {/* Assuming image is a URL */}
+            <td><img src={key.image} alt={key.name} className="bike-image" /></td>
             <td>{key.engine_capacity}</td>
             <td>{key.mileage}</td>
             <td>{key.transmission}</td>
@@ -66,43 +66,43 @@ const Bikedatadisplay = () => {
             <td>{key.power}</td>
             <td>{key.tourque}</td>
             <td>
-                <button onClick={() => openUpdateForm(key)}>Edit</button> {/* Pass the bike data to edit */}
-                <button onClick={() => deleteRecord(key.id)}>Delete</button> {/* Pass the id to delete */}
+                <button className="edit-button" onClick={() => openUpdateForm(key)}>Edit</button>
+                <button className="delete-button" onClick={() => deleteRecord(key.id)}>Delete</button>
             </td>
         </tr>
     ));
 
     return (
-        <>
-            <h1>Bike Data Display</h1>
-            <center>
-                <table border="1 solid black" width="90%" align="center" className="tab">
+        <div id="bike-data-display">
+            <h1 className="display-title">Bike Data List</h1>
+            <div className="table-container">
+                <table className="bike-table">
                     <thead>
-                        <tr className="tra">
-                            <th>Emp name</th>
-                            <th>Emp biketype</th>
-                            <th>Emp price</th>
-                            <th>Emp image</th>
-                            <th>Emp engine_capacity</th>
-                            <th>Emp mileage</th>
-                            <th>Emp transmission</th>
-                            <th>Emp weight</th>
-                            <th>Emp fuel_tank</th>
-                            <th>Emp power</th>
-                            <th>Emp tourque</th>
-                            <th>Actions</th> {/* Change to Actions for clarity */}
+                        <tr className="table-header">
+                            <th>Name</th>
+                            <th>Bike Type</th>
+                            <th>Price</th>
+                            <th>Image</th>
+                            <th>Engine Capacity</th>
+                            <th>Mileage</th>
+                            <th>Transmission</th>
+                            <th>Weight</th>
+                            <th>Fuel Tank</th>
+                            <th>Power</th>
+                            <th>Torque</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         {ans}
                     </tbody>
                 </table>
-            </center>
+            </div>
 
             {showUpdateForm && (
                 <DataUpdate bike={selectedBike} onClose={() => setShowUpdateForm(false)} />
             )}
-        </>
+        </div>
     );
 };
 

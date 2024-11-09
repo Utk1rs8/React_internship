@@ -47,22 +47,26 @@ const SliderUpdate = ({ slider, onClose }) => {
     }, [slider]);
 
     return (
-        <div className="update-container">
-            <h2>Update Slider</h2>
-            <div className="form-group">
-                <label htmlFor="name">Name:</label>
-                <input type="text" id="name" name="name" value={input.name} onChange={handleInput} />
+        <div className="bike-update-container">
+            <h2 className="bike-update-title">Update Slider</h2>
+            <div className="bike-update-form">
+                <div className="bike-update-form-group">
+                    <label htmlFor="name">Name:</label>
+                    <input type="text" id="name" name="name" value={input.name} onChange={handleInput} />
+                </div>
+                <div className="bike-update-form-group">
+                    <label htmlFor="price">Price:</label>
+                    <input type="number" id="price" name="price" value={input.price} onChange={handleInput} />
+                </div>
+                <div className="bike-update-form-group">
+                    <label htmlFor="image">Image:</label>
+                    <input type="file" id="image" name="image" onChange={handleFileInput} />
+                </div>
             </div>
-            <div className="form-group">
-                <label htmlFor="price">Price:</label>
-                <input type="number" id="price" name="price" value={input.price} onChange={handleInput} />
+            <div className="bike-update-actions">
+                <button className="bike-update-button" onClick={updateData}>Update</button>
+                <button className="bike-cancel-button" onClick={onClose}>Cancel</button>
             </div>
-            <div className="form-group">
-                <label htmlFor="image">Image:</label>
-                <input type="file" id="image" name="image" onChange={handleFileInput} />
-            </div>
-            <button className="submit-button" onClick={updateData}>Update</button>
-            <button className="cancel-button" onClick={onClose}>Cancel</button>
         </div>
     );
 };

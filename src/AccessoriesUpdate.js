@@ -49,22 +49,39 @@ const AccessoriesUpdate = ({ accessory, onClose }) => {
     };
 
     return (
-        <div className="update-container">
-            <h2>Update Accessory</h2>
-            <div className="form-group">
-                <label htmlFor="name">Name:</label>
-                <input type="text" id="name" name="name" value={input.name} onChange={handleInput} />
+        <div className="accessory-update-container">
+            <h2 className="accessory-update-title">Update Accessory</h2>
+            <div className="accessory-update-form">
+                {[ 
+                    { label: 'Name', type: 'text', name: 'name' },
+                    { label: 'Price', type: 'number', name: 'price' },
+                    { label: 'Image', type: 'file', name: 'image', onChange: handleFileInput },
+                ].map((field) => (
+                    <div className="accessory-update-form-group" key={field.name}>
+                        <label htmlFor={field.name}>{field.label}:</label>
+                        {field.type === 'file' ? (
+                            <input
+                                type={field.type}
+                                id={field.name}
+                                name={field.name}
+                                onChange={field.onChange || handleFileInput}
+                            />
+                        ) : (
+                            <input
+                                type={field.type}
+                                id={field.name}
+                                name={field.name}
+                                value={input[field.name]}
+                                onChange={handleInput}
+                            />
+                        )}
+                    </div>
+                ))}
             </div>
-            <div className="form-group">
-                <label htmlFor="price">Price:</label>
-                <input type="number" id="price" name="price" value={input.price} onChange={handleInput} />
+            <div className="accessory-update-actions">
+                <button className="accessory-update-button" onClick={updateData}>Update</button>
+                <button className="accessory-cancel-button" onClick={onClose}>Cancel</button>
             </div>
-            <div className="form-group">
-                <label htmlFor="image">Image:</label>
-                <input type="file" id="image" name="image" onChange={handleFileInput} />
-            </div>
-            <button className="submit-button" onClick={updateData}>Update</button>
-            <button className="cancel-button" onClick={onClose}>Cancel</button> {/* Button to cancel update */}
         </div>
     );
 };

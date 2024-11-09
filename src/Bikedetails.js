@@ -15,26 +15,34 @@ const BikeDetails = () => {
     });
   }, [id]);
 
-  if (!product) return <div>Loading...</div>;
+  if (!product) return <div className="loading">Loading...</div>;
 
   return (
     <>
-    <div>
-      <img src={product.image} alt={product.name} width="500" />
-    </div>
-    <div>
-      <h1>{product.name}</h1>
-      <h1>Price: ₹{product.price}</h1>
-      <h1>BikeType:{product.biketype}</h1>
-      <h1>Engine Capacity:{product.engine_capacity}</h1>
-      <h1>Mileage:{product.mileage}</h1>
-      <h1>Transmission:{product.transmission}</h1>
-      <h1>Weight:{product.weight}</h1>
-      <h1>Fuel Tank:{product.fuel_tank}</h1>
-      <h1>Power:{product.power}</h1>
-      <h1>Torque:{product.tourque}</h1>
-      <button onClick={()=>{dispatch(addtoCart({id:product.id, name:product.name, price:product.price, image:product.image }))}}>Add to Cart</button>
-    </div>
+      <div className="bike-details">
+        <div className="bike--image" id="bikeImage">
+          <img src={product.image} alt={product.name} />
+        </div>
+        <div className="bike-info" id="bikeInfo">
+          <h1 className="bike-name">{product.name}</h1>
+          <h2 className="bike-price">Price: ₹{product.price}</h2>
+          <p className="bike-spec" id="bikeType">Bike Type: {product.biketype}</p>
+          <p className="bike-spec" id="engineCapacity">Engine Capacity: {product.engine_capacity}</p>
+          <p className="bike-spec" id="mileage">Mileage: {product.mileage}</p>
+          <p className="bike-spec" id="transmission">Transmission: {product.transmission}</p>
+          <p className="bike-spec" id="weight">Weight: {product.weight}</p>
+          <p className="bike-spec" id="fuelTank">Fuel Tank: {product.fuel_tank}</p>
+          <p className="bike-spec" id="power">Power: {product.power}</p>
+          <p className="bike-spec" id="torque">Torque: {product.tourque}</p>
+          <button 
+            className="add-to-cart-button" 
+            id="addToCartButton"
+            onClick={() => { dispatch(addtoCart({ id: product.id, name: product.name, price: product.price, image: product.image })); }}
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
     </>
   );
 };

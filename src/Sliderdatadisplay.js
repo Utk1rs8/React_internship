@@ -1,18 +1,23 @@
-import { useEffect, useState } from "react";
+import React, { Component } from "react";
 import axios from "axios";
 import SliderUpdate from './SliderUpdate'; // Import the SliderUpdate component
 
-const Sliderdatadisplay = () => {
-    const [mydata, setmyData] = useState([]);
-    const [selectedSlider, setSelectedSlider] = useState(null); // State to hold the selected slider for editing
-    const [showUpdateForm, setShowUpdateForm] = useState(false); // State to control the visibility of the update form
+class SliderDataDisplay extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            mydata: [],
+            selectedSlider: null,
+            showUpdateForm: false,
+        };
+    }
 
     // Load data from the API
-    const loadData = () => {
+    loadData = () => {
         let api = "http://127.0.0.1:8000/slider/";
         axios.get(api)
             .then((res) => {
-                setmyData(res.data); // Set state with res.data
+                this.setState({ mydata: res.data });
             })
             .catch((err) => {
                 console.log(err);
@@ -20,12 +25,12 @@ const Sliderdatadisplay = () => {
     };
 
     // Load data on component mount
-    useEffect(() => {
-        loadData();
-    }, []); // Empty dependency array to ensure this runs only once
+    componentDidMount() {
+        this.loadData();
+    }
 
     // Function to delete a record
-    const deleteRecord = async (id) => {
+    deleteRecord = async (id) => {
         try {
             const response = await axios.delete(`http://127.0.0.1:8000/slider/${id}/`, {
                 headers: {
@@ -36,7 +41,9 @@ const Sliderdatadisplay = () => {
             if (response.status === 204) {
                 console.log("Record deleted successfully");
                 // Update the state by removing the deleted item
-                setmyData(mydata.filter((item) => item.id !== id));
+                this.setState({
+                    mydata: this.state.mydata.filter((item) => item.id !== id)
+                });
             } else {
                 console.error("Error deleting the record");
             }
@@ -46,48 +53,52 @@ const Sliderdatadisplay = () => {
     };
 
     // Function to open the update form
-    const openUpdateForm = (slider) => {
-        setSelectedSlider(slider);
-        setShowUpdateForm(true);
+    openUpdateForm = (slider) => {
+        this.setState({ selectedSlider: slider, showUpdateForm: true });
     };
 
-    // Map through data and display it in a table
-    const ans = mydata.map((key) => (
-        <tr className="da" key={key.id}>
-            <td>{key.name}</td>
-            <td>{key.price}</td>
-            <td><img src={key.image} alt={key.name} width="100" /></td> {/* Assuming image is a URL */}
-            <td>
-                <button onClick={() => openUpdateForm(key)}>Edit</button> {/* Pass the slider data to edit */}
-                <button onClick={() => deleteRecord(key.id)}>Delete</button> {/* Pass the id to delete */}
-            </td>
-        </tr>
-    ));
+    render() {
+        const { mydata, selectedSlider, showUpdateForm } = this.state;
 
-    return (
-        <>
-            <h1>Slider Data Display</h1>
-            <center>
-                <table border="1 solid black" width="90%" align="center" className="tab">
-                    <thead>
-                        <tr className="tra">
-                            <th>Emp name</th>
-                            <th>Emp price</th>
-                            <th>Emp image</th>
-                            <th>Actions</th> {/* Change to Actions for clarity */}
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {ans}
-                    </tbody>
-                </table>
-            </center>
+        const ans = mydata.map((key) => (
+            <tr className="bike-row" key={key.id}>
+                <td>{key.name}</td>
+                <td>{key.price}</td>
+                <td><img src={key.image} alt={key.name} className="bike-image" /></td> {/* Assuming image is a URL */}
+                <td>
+                    <button className="edit-button" onClick={() => this.openUpdateForm(key)}>Edit</button> {/* Pass the slider data to edit */}
+                    <button className="delete-button" onClick={() => this.deleteRecord(key.id)}>Delete</button> {/* Pass the id to delete */}
+                </td>
+            </tr>
+        ));
 
-            {showUpdateForm && (
-                <SliderUpdate slider={selectedSlider} onClose={() => setShowUpdateForm(false)} />
-            )}
-        </>
-    );
-};
+        return (
+            <div id="bike-data-display">
+                <center>
+                    <h1 className="display-title">Slider Data List</h1>
+                </center>
+                <div className="table-container">
+                    <table className="bike-table">
+                        <thead>
+                            <tr className="table-header">
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Image</th>
+                                <th>Actions</th> {/* Change to Actions for clarity */}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {ans}
+                        </tbody>
+                    </table>
+                </div>
 
-export default Sliderdatadisplay;
+                {showUpdateForm && (
+                    <SliderUpdate slider={selectedSlider} onClose={() => this.setState({ showUpdateForm: false })} />
+                )}
+            </div>
+        );
+    }
+}
+
+export default SliderDataDisplay;

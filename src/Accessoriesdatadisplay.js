@@ -5,6 +5,7 @@ import AccessoriesUpdate from './AccessoriesUpdate'; // Import the update compon
 const Accessoriesdatadisplay = () => {
     const [mydata, setmyData] = useState([]);
     const [selectedAccessory, setSelectedAccessory] = useState(null); // State to track the selected accessory for editing
+    const [showUpdateForm, setShowUpdateForm] = useState(false); // State to control the visibility of the update form
 
     // Load data from the API
     const loadData = () => {
@@ -44,44 +45,48 @@ const Accessoriesdatadisplay = () => {
         }
     };
 
-    // Function to handle edit
-    const handleEdit = (accessory) => {
-        setSelectedAccessory(accessory); // Set the selected accessory to edit
+    // Function to open the update form
+    const openUpdateForm = (accessory) => {
+        setSelectedAccessory(accessory);
+        setShowUpdateForm(true);
     };
 
     // Map through data and display it in a table
     const ans = mydata.map((key) => (
-        <tr className="da" key={key.id}>
+        <tr className="accessory-row" key={key.id}>
             <td>{key.name}</td>
             <td>{key.price}</td>
-            <td><img src={key.image} alt={key.name} width="100" /></td> {/* Assuming image is a URL */}
+            <td><img src={key.image} alt={key.name} className="accessory-image" /></td>
             <td>
-                <button onClick={() => handleEdit(key)}>Edit</button> {/* Button to edit the record */}
-                <button onClick={() => deleteRecord(key.id)}>Delete</button> {/* Pass the id to delete */}
+                <button className="edit-button" onClick={() => openUpdateForm(key)}>Edit</button>
+                <button className="delete-button" onClick={() => deleteRecord(key.id)}>Delete</button>
             </td>
         </tr>
     ));
 
     return (
-        <>
-            <h1>Accessories Data</h1>
-            <center>
-                <table border="1 solid black" width="90%" align="center" className="tab">
+        <div id="accessory-data-display">
+            <h1 className="display-title">Accessories Data List</h1>
+            <div className="table-container">
+                <table className="accessory-table">
                     <thead>
-                        <tr className="tra">
-                            <th>Emp name</th>
-                            <th>Emp price</th>
-                            <th>Emp image</th>
-                            <th>Actions</th> {/* Updated header to include actions */}
+                        <tr className="table-header">
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Image</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         {ans}
                     </tbody>
                 </table>
-            </center>
-            {selectedAccessory && <AccessoriesUpdate accessory={selectedAccessory} onClose={() => setSelectedAccessory(null)} />} {/* Render the update form if an accessory is selected */}
-        </>
+            </div>
+
+            {showUpdateForm && (
+                <AccessoriesUpdate accessory={selectedAccessory} onClose={() => setShowUpdateForm(false)} />
+            )}
+        </div>
     );
 };
 
