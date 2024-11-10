@@ -2244,88 +2244,233 @@
 }
 
 
-/* BuyNow Component CSS */
+/* BuyNow CSS */
+
 .buy-now-container {
-  width: 100%;
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f9f9f9;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
   margin-bottom: 20px;
 }
 
+/* Title styling */
 .buy-now-title {
-  font-size: 24px;
+  font-size: 1.8em;
   font-weight: bold;
-  text-align: center;
   margin-bottom: 20px;
+  text-align: center;
+  color: #333;
 }
 
-.buy-now-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+/* Section styling */
+.buy-now-section {
+  margin-bottom: 25px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #ffffff;
 }
 
+/* Section headers */
+.buy-now-section h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ff0000;
+  padding-bottom: 5px;
+}
+
+/* Input group styling */
 .buy-now-input-group {
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 15px;
 }
 
 .input-label {
-  font-size: 14px;
-  font-weight: 600;
+  display: block;
+  font-size: 0.9em;
+  color: #555;
   margin-bottom: 5px;
 }
 
 .input-field {
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #333;
 }
 
+.input-field:focus {
+  border-color: #ff0000;
+  outline: none;
+  box-shadow: 0 0 3px rgba(255, 0, 0, 0.611);
+}
+
+/* Order summary styling */
+.order-summary-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.order-summary-item {
+  font-size: 1em;
+  color: #333;
+  margin: 8px 0;
+}
+
+.order-summary-total {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #000000;
+  text-align: right;
+}
+
+/* Payment options styling */
+.payment-options label {
+  display: block;
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.payment-options input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* Action button styling */
 .buy-now-actions {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  text-align: center;
 }
 
 .payment-button {
-  padding: 10px 20px;
-  font-size: 16px;
+  background-color: #fc2c2cf3;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1em;
   font-weight: bold;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
-  background-color: #ff2f2f;
-  color: white;
+  transition: background-color 0.3s ease;
 }
 
 .payment-button:hover {
   background-color: #ff0000;
 }
 
-/* Responsive CSS */
+.payment-button:active {
+  background-color: #004494;
+}
+
+/* Responsive styling */
 @media (max-width: 768px) {
   .buy-now-container {
-    padding: 10px;
+    padding: 15px;
+  }
+  
+  .buy-now-title {
+    font-size: 1.5em;
   }
 
-  .buy-now-input-group {
-    gap: 8px;
-  }
-
-  .input-field {
-    font-size: 13px;
-    padding: 6px;
+  .buy-now-section h2 {
+    font-size: 1.2em;
   }
 
   .payment-button {
-    font-size: 14px;
-    padding: 8px 15px;
+    width: 100%;
+    padding: 10px;
   }
+}
+
+/* BikeMaintenance.css */
+
+/* Main container styling */
+.maintenance-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Header section */
+.maintenance-header h1 {
+  font-size: 2em;
+  color: #ff0000;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.maintenance-summary {
+  font-size: 1.2em;
+  color: #555;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Maintenance section */
+.maintenance-section {
+  margin-bottom: 30px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.maintenance-section h2 {
+  font-size: 1.5em;
+  color: #ff0000;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ff0000;
+  padding-bottom: 5px;
+}
+
+/* Maintenance features list */
+.maintenance-features {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.maintenance-features li {
+  font-size: 1em;
+  padding: 8px 0;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+}
+
+.maintenance-features li:last-child {
+  border-bottom: none;
+}
+
+/* Footer and button */
+.maintenance-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .maintenance-header h1 {
+    font-size: 1.6em;
+  }
+
+  .maintenance-summary {
+    font-size: 1em;
+    margin-bottom: 15px;
+  }
+
+  .maintenance-section h2 {
+    font-size: 1.3em;
+  }
+
 }

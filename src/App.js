@@ -21,6 +21,7 @@ import NakedBikes from "./NakedBikes";
 import SportsBikes from "./SportsBikes";
 import CruiserBikes from "./CruiserBikes";
 import TouringBikes from "./TouringBikes";
+import ServiceMaintenance from "./ServiceMaintenance";
 
 
 
@@ -51,7 +52,9 @@ const App=()=>{
               <Route path="nakedbikes" element={<NakedBikes/>} />
               <Route path="sportbikes" element={<SportsBikes/>} />
               <Route path="cruiserbikes" element={<CruiserBikes/>} />
-              <Route path="touringbikes" element={<TouringBikes/>} />            </Route>
+              <Route path="touringbikes" element={<TouringBikes/>} />        
+              <Route path="servicemaintenance" element={<ServiceMaintenance/>} />        
+              </Route>
            </Routes>
         </BrowserRouter>
           

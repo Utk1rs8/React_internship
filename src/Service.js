@@ -17,7 +17,7 @@ const Service=()=>{
                 <p> Details of different plans available, such as monthly, quarterly, or annual subscriptions. These may include tiered options (e.g., Basic, Standard, Premium) with varying levels of benefits and pricing.</p>
                 </div>
                 <div className="service-item">
-                <h2>Maintenance</h2>
+                <Link to="../servicemaintenance" style={{textDecoration:'none'}}><h2>Maintenance</h2></Link>
                 <p>Briefly describe the types of maintenance services offered, like tune-ups, repairs, tire replacements, chain adjustments, and brake inspections.Emphasize the importance of regular maintenance for longevity and performance.</p>
                 </div>
                 <div className="service-item">
